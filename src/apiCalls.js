@@ -14,3 +14,7 @@ export const fetchData = async (path) => {
 
 // return fetch(`http://phish.in/api/v1/${path}`, optionsObject).then((res) =>
 // res.json()
+
+// const getShows = (year) => {
+//   fetchData(`years/${year}`).then((data) => setShows(data.data));
+// };
