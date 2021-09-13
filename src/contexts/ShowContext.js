@@ -5,20 +5,22 @@ const ShowContext = createContext();
 
 const ShowContextProvider = (props) => {
   const [years, setYears] = useState([]);
-  const [shows, setShows] = useState([]);
+  // const [shows, setShows] = useState([]);
   const [currentTrack, setCurrentTrack] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-
-  const getShows = (year) => {
-    fetchData(`years/${year}`).then((data) => setShows(data.data));
-  };
+  // const [isLoading, setIsLoading] = useState(true);
 
   const getYears = () => {
-    fetchData('years').then((data) => setYears(data));
+    fetchData('years').then((data) => setYears(data.data));
+  };
+
+  const getTrack = (id) => {
+    fetchData(`tracks/${id}`).then((data) => setCurrentTrack(data.data));
   };
 
   return (
-    <ShowContext.Provider value={{ year, getYears, shows, getShows }}>
+    <ShowContext.Provider
+      value={{ years, getYears, currentTrack, setCurrentTrack }}
+    >
       {props.children}
     </ShowContext.Provider>
   );
