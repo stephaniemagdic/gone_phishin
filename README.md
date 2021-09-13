@@ -46,13 +46,13 @@ In app file return (
   - Header
   - Footer
     - AudioPlayer
-  - Dashboard/YearDisplay
+  - Dashboard/YearDisplayIndex
     - YearContainer
     - Year
-  - ShowDisplay
+  - ShowDisplayIndex
     - ShowContainer
     - Show
-  - TrackDisplay
+  - TrackDisplayIndex
     - TrackContainer
     - Track
 
