@@ -46,6 +46,7 @@ function App() {
             );
           }}
         />
+        <Route render={() => <p>Error. Page Not Found!</p>} />
       </Switch>
     </ShowContextProvider>
   );
