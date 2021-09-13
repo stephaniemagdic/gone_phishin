@@ -1,8 +1,8 @@
 import React from 'react';
+import { ShowContext, ShowContextProvider } from '../../contexts/ShowContext';
 
 function App() {
-  return;
-  <div className="App"></div>;
+  return <ShowContextProvider></ShowContextProvider>;
 }
 
 export default App;
