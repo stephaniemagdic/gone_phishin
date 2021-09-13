@@ -29,9 +29,17 @@
   #### Values to be passed into child components:
     - updateShows(year)
     - updateTracks(show)
-    - setCurrentSong //get details
-    
+    - setCurrentSong //get details 
 
-### Component Folder:
-  #### 
-  
+### Router:
+```
+In app file return (
+  <DataProvider>
+    <Route render Dashboard/YearDisplay >
+    <Route render ShowDisplay >
+    <Route render TrackDisplay >
+  </DataProvider>
+)
+```
+
+
