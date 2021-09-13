@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
+import { fetchData } from './apiCalls';
 
 const ShowContext = createContext();
 
@@ -8,8 +9,14 @@ const ShowContextProvider = (props) => {
   const [currentTrack, setCurrentTrack] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+  const getShows = (year) => {
+    fetchData(year).then((data) => setShows(data.data));
+  };
+
   return (
-    <ShowContext.Provider value={{}}>{props.children}</ShowContext.Provider>
+    <ShowContext.Provider value={{ shows, getShows }}>
+      {props.children}
+    </ShowContext.Provider>
   );
 };
 
