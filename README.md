@@ -42,4 +42,18 @@ In app file return (
 )
 ```
 
+### Component Folder:
+  - Header
+  - Footer
+    - AudioPlayer
+  - Dashboard/YearDisplay
+    - YearContainer
+    - Year
+  - ShowDisplay
+    - ShowContainer
+    - Show
+  - TrackDisplay
+    - TrackContainer
+    - Track
 
+  
