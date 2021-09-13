@@ -1,4 +1,4 @@
-data = {
+export const data = {
   years: [
     '1983-1987',
     '1988',
