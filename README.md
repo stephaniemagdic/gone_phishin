@@ -12,10 +12,25 @@
     OPTIONAL:
     - [ year, setYear ]  / use year for styling logo/header
 
-  Note: use effect will be used on most individual components with router: 
+    ```<RecipeContext.Provider value= {
+      updateTracks,
+      updateShows,
+      setCurrentSong
+    }>
+    ```
+
+  ```Note: use effect will be used on most individual components with router: 
     useEffect(() => {
-      fetch(url${this.params.key})
+      updateShows(url${this.params.key})
+      // or updateTracks(url${this.params.key})
     }, [])
+  ```
+
+  #### Values to be passed into child components:
+    - updateShows(year)
+    - updateTracks(show)
+    - setCurrentSong //get details
+    
 
 ### Component Folder:
   #### 
