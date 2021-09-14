@@ -1,19 +1,28 @@
 import React, { useState, createContext, useEffect } from 'react';
 import { fetchData } from '../apiCalls';
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const ShowContext = createContext();
 
-const ShowContextProvider = (props) => {
+const ShowContextProvider = ({ children }) => {
   const [years, setYears] = useState([]);
+  const [error, setError] = useState('');
   // const [shows, setShows] = useState([]);
   // const [currentTrack, setCurrentTrack] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
 
+  const getYears = async () => {
+    try {
+      const years = await fetchData('years');
+      setYears(years.data.reverse());
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   useEffect(() => {
-    fetchData('years')
-      .then((data) => data.data)
-      .then((data) => data.reverse())
-      .then((data) => setYears(data));
+    getYears();
   }, []);
 
   // const getTrack = (id) => {
@@ -21,8 +30,8 @@ const ShowContextProvider = (props) => {
   // };
 
   return (
-    <ShowContext.Provider value={{ years }}>
-      {props.children}
+    <ShowContext.Provider value={{ years, error }}>
+      {children}
     </ShowContext.Provider>
   );
 };
