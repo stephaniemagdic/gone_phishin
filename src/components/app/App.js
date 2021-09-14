@@ -1,9 +1,10 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
-import Container from '../container/Container';
-import Footer from '../footer/Footer';
+// import Navbar from '../navbar/Navbar';
+// import Container from '../container/Container';
+import YearsContainer from '../years_container/YearsContainer';
+// import Footer from '../footer/Footer';
 
 function App() {
   return (
@@ -11,13 +12,15 @@ function App() {
       <Switch>
         <Route
           exact
-          path="gone-phishin/years"
+          path="/"
           render={() => {
-            <div className="app">
-              <Navbar />
-              <Container type="years" />
-              <Footer />
-            </div>;
+            return (
+              <div className="app">
+                {/* <Navbar /> */}
+                <YearsContainer />
+                {/* <Footer /> */}
+              </div>
+            );
           }}
         />
         <Route
@@ -26,9 +29,9 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Navbar />
-                <Container id={match.params.year} />
-                <Footer />
+                {/* <Navbar /> */}
+                {/* <Container path={`/year/${match.params.year}`} /> */}
+                {/* <Footer /> */}
               </div>
             );
           }}
@@ -39,9 +42,9 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Navbar />
-                <Container id={match.params.id} />
-                <Footer />
+                {/* <Navbar /> */}
+                {/* <Container id={`shows/${match.params.id}`} /> */}
+                {/* <Footer /> */}
               </div>
             );
           }}
