@@ -1,10 +1,9 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
-// import Navbar from '../navbar/Navbar';
-// import Container from '../container/Container';
+import Navbar from '../navbar/Navbar';
 import YearsContainer from '../years_container/YearsContainer';
-// import Footer from '../footer/Footer';
+import Footer from '../footer/Footer';
 
 function App() {
   return (
@@ -15,10 +14,10 @@ function App() {
           path="/"
           render={() => {
             return (
-              <div className="app">
-                {/* <Navbar /> */}
+              <div className="years-view">
+                <Navbar />
                 <YearsContainer />
-                {/* <Footer /> */}
+                <Footer />
               </div>
             );
           }}
@@ -29,9 +28,8 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                {/* <Navbar /> */}
-                {/* <Container path={`/year/${match.params.year}`} /> */}
-                {/* <Footer /> */}
+                <Navbar />
+                <Footer />
               </div>
             );
           }}
@@ -42,9 +40,8 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                {/* <Navbar /> */}
-                {/* <Container id={`shows/${match.params.id}`} /> */}
-                {/* <Footer /> */}
+                <Navbar />
+                <Footer />
               </div>
             );
           }}
