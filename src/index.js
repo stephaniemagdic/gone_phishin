@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <BrowserRouter>
