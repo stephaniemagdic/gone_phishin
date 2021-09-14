@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { fetchData } from '../apiCalls';
 
 const ShowContext = createContext();
@@ -6,22 +6,24 @@ const ShowContext = createContext();
 const ShowContextProvider = (props) => {
   const [years, setYears] = useState([]);
   // const [shows, setShows] = useState([]);
-  const [currentTrack, setCurrentTrack] = useState({});
+  // const [currentTrack, setCurrentTrack] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
 
-  const getYears = () => {
-    fetchData('years').then((data) => setYears(data.data));
-  };
+  useEffect(() => {
+    fetchData('years')
+      .then((data) => data.data)
+      .then((data) => data.reverse())
+      .then((data) => setYears(data));
+  }, []);
 
-  const getTrack = (id) => {
-    fetchData(`tracks/${id}`).then((data) => setCurrentTrack(data.data));
-  };
+  // const getTrack = (id) => {
+  //   fetchData(`tracks/${id}`).then((data) => setCurrentTrack(data.data));
+  // };
 
   return (
-    <ShowContext.Provider
-      value={{ years, getYears, currentTrack, setCurrentTrack }}
-    >
+    <ShowContext.Provider value={{ years }}>
       {props.children}
+      {console.log(years, 'string')}
     </ShowContext.Provider>
   );
 };
