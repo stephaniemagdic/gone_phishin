@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import Container from './components/container/Container';
-import Footer from './components/footer/Footer';
+// import Navbar from './components/navbar/Navbar';
+import Container from '../container/Container';
+// import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
           path="gone-phishin/years"
           render={() => {
             <div className="app">
-              <Navbar />
+              {/* <Navbar /> */}
               <Container type="years" />
-              <Footer />
+              {/* <Footer /> */}
             </div>;
           }}
         />
@@ -26,14 +26,14 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Navbar />
+                {/* <Navbar /> */}
                 <Container id={match.params.year} />
-                <Footer />
+                {/* <Footer /> */}
               </div>
             );
           }}
         />
-        <Route
+        {/* <Route
           exact
           path="gone-phishin/shows/:id"
           render={({ match }) => {
@@ -45,8 +45,8 @@ function App() {
               </div>
             );
           }}
-        />
-        <Route render={() => <p>Error. Page Not Found!</p>} />
+        /> */}
+        {/* <Route render={() => <p>Error. Page Not Found!</p>} /> */}
       </Switch>
     </ShowContextProvider>
   );
