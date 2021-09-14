@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import Container from './components/container/Container';
-import Footer from './components/footer/Footer';
+import Navbar from '../navbar/Navbar';
+import Container from '../container/Container';
+import Footer from '../footer/Footer';
 
 function App() {
   return (
