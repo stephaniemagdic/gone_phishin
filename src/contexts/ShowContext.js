@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
-import { fetchData } from './apiCalls';
+import { fetchData } from '../apiCalls';
 
 const ShowContext = createContext();
 
