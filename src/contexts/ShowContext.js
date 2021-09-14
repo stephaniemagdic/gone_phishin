@@ -23,7 +23,6 @@ const ShowContextProvider = (props) => {
   return (
     <ShowContext.Provider value={{ years }}>
       {props.children}
-      {console.log(years, 'string')}
     </ShowContext.Provider>
   );
 };
