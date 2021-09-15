@@ -31,7 +31,7 @@ const [shows, setShows] = useState([]);
 
   //feels weird that the container is doing the fetch. Feels like it should be in a parent component. 
 
-  const showCardComponents = shows.map(show => <Show id={show.id}/>)
+  const showCardComponents = shows.map(show => <Show show={show}/>)
 
   return (
     <div className="ShowContainer"> 
