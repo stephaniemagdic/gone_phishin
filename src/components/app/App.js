@@ -27,7 +27,7 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/gone-phishin/years"
+          path="/"
           render={() => {
             return (
               <div className="years-view">
