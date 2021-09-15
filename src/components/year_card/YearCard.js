@@ -1,9 +1,10 @@
 import React from 'react';
+import './YearCard.css';
 
 const YearCard = ({ item }) => {
   return (
-    <div>
-      <h3>{item}</h3>
+    <div className="year-card">
+      <h3 className="year-text">{item}</h3>
     </div>
   );
 };
