@@ -2,11 +2,12 @@ import { fetchData } from '../../apiCalls';
 import React, { useContext, useEffect } from 'react';
 
 
-const Container = () => {
+const Container = (props) => {
+
 
  useEffect(() => {
-  fetchData("/years/2021").then(data => console.log(data)).catch(err => console.log(err))
-  }, [])
+  fetchData(`/years/${props.id}`).then(data => console.log(data)).catch(err => console.log(err))
+  }, [props.id])
 
 
   return (
