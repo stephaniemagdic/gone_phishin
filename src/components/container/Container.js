@@ -13,9 +13,8 @@ const Container = (props) => {
       fetchData(`/years/${props.id}`).then(data => {
         setShows(data.data);
         setIsLoading(false);
-        console.log(shows)
-        console.log(data)
       }).catch(err => console.log(err))
+      //TO DO: when error component is made, render error component.
     }
     }, [props.id])
 
