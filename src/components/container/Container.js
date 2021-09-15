@@ -19,15 +19,14 @@ const Container = (props) => {
     }
     }, [props.id])
 
+     {/* at some point we should make this conditional along with line 28 depending on what type is passed. */}
     const showCardComponents = shows.map(show => <Show show={show}/>)
     
   return (
-    <div className="Container">
       <div className={props.type}> 
       {isLoading && <p>Loading...</p>}
       {!isLoading && showCardComponents}
       </div>
-    </div>
   )
 }
 
