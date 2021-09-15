@@ -1,47 +1,48 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
+// import Navbar from '../navbar/Navbar';
 import Container from '../container/Container';
-import Footer from '../footer/Footer';
+// import Footer from '../footer/Footer';
 
 function App() {
   return (
-    <ShowContextProvider>
+    <>
+     <ShowContextProvider>
       <Switch>
         <Route
           exact
-          path="gone-phishin/years"
-          render={() => {
+          path="/gone-phishin/years"
+          render={() => 
             <div className="app">
-              <Navbar />
+              {/* <Navbar /> */}
               <Container type="years" />
-              <Footer />
-            </div>;
-          }}
+              {/* <Footer /> */}
+            </div>
+          }
         />
         <Route
           exact
-          path="gone-phishin/years/:year"
-          render={({ match }) => {
-            return (
+          path="/gone-phishin/years/:year"
+            render={({match}) =>
+            (
               <div className="app">
-                <Navbar />
-                <Container id={match.params.year} />
-                <Footer />
+                {/* <Navbar /> */}
+                <Container id={match.params.year} type="shows" />
+                {/* <Footer /> */}
               </div>
-            );
-          }}
+            )
+          }
         />
         <Route
           exact
-          path="gone-phishin/shows/:id"
+          path="/gone-phishin/shows/:id"
           render={({ match }) => {
             return (
               <div className="app">
-                <Navbar />
+                {/* <Navbar /> */}
                 <Container id={match.params.id} />
-                <Footer />
+                {/* <Footer /> */}
               </div>
             );
           }}
@@ -49,6 +50,7 @@ function App() {
         <Route render={() => <p>Error. Page Not Found!</p>} />
       </Switch>
     </ShowContextProvider>
+    </>
   );
 }
 
