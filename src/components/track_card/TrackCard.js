@@ -1,14 +1,25 @@
-import React from 'react'
+import React from 'react';
+import './TrackCard.css';
 
-function TrackCard() {
-
-  const handleClick () =>
+const TrackCard = ({ track }) => {
+  const {
+    id,
+    mp3,
+    show_date,
+    show_id,
+    title,
+    venue_location,
+    venue_name,
+    waveform_image,
+  } = track;
+  console.log(id, 'hello');
 
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <article className="track-card">
+      <p>{title}</p>
+      <iframe src={mp3}></iframe>
+    </article>
+  );
+};
 
-export default TrackCard
+export default TrackCard;
