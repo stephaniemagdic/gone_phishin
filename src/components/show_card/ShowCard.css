@@ -1,0 +1,17 @@
+.ShowCard {
+  border-bottom: 2px solid green;
+  display: flex;
+  flex: flex-wrap;
+}
+
+p {
+  margin: 20px; 
+  text-decoration: none;
+}
+
+/* link {
+  text-decoration: none;
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+} 
+} */
