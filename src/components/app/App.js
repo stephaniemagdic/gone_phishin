@@ -38,7 +38,7 @@ function App() {
         />
         <Route
           exact
-          path="gone-phishin/years/:year"
+          path="/gone-phishin/years/:year"
           render={({ match }) => {
             return (
               <div className="app">
