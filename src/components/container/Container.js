@@ -8,12 +8,14 @@ const [isLoading, setIsLoading] = useState(true);
 const [shows, setShows] = useState([]);
 
  useEffect(() => {
-  fetchData(`/years/${props.id}`).then(data => {
-    setShows(data.data);
-    setIsLoading(false);
-    console.log(shows)
-    console.log(data)
-  }).catch(err => console.log(err))
+  if(props.type === "shows") {
+    fetchData(`/years/${props.id}`).then(data => {
+      setShows(data.data);
+      setIsLoading(false);
+      console.log(shows)
+      console.log(data)
+    }).catch(err => console.log(err))
+  }
   }, [props.id])
 
 //  const updateShows = async () => {
@@ -32,7 +34,7 @@ const [shows, setShows] = useState([]);
   const showCardComponents = shows.map(show => <Show id={show.id}/>)
 
   return (
-    <div> I am a container!! 
+    <div className="ShowContainer"> 
       {showCardComponents}
     </div>
 
