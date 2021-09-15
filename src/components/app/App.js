@@ -41,7 +41,7 @@ function App() {
             return (
               <div className="app">
                 {/* <Navbar /> */}
-                <Container id={match.params.id} />
+                <Container id={match.params.id} type="tracks" />
                 {/* <Footer /> */}
               </div>
             );
