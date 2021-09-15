@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <img className="phish-in-logo" src={phishInLogo}></img>
+      {/* {isNotOnMainPage && Search} */}
     </div>
   );
 }
