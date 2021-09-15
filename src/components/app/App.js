@@ -7,7 +7,7 @@ import Footer from '../footer/Footer';
 import { ShowContext } from '../../contexts/ShowContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Container from '../container/Container';
+import ShowsContainer from '../shows_container/ShowsContainer';
 
 function App() {
   //To Do
@@ -42,7 +42,7 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Container id={match.params.year} type="shows" />
+                <ShowsContainer id={match.params.year} />
               </div>
             );
           }}
@@ -53,7 +53,7 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Container id={match.params.id} />
+                {/* <Container id={match.params.id} /> */}
               </div>
             );
           }}
