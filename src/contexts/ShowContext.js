@@ -30,7 +30,7 @@ const ShowContextProvider = ({ children }) => {
   // };
 
   return (
-    <ShowContext.Provider value={{ years, error }}>
+    <ShowContext.Provider value={{ years, error, fetchData }}>
       {children}
     </ShowContext.Provider>
   );
