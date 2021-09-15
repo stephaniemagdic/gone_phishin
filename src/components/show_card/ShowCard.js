@@ -8,7 +8,6 @@ const ShowCard = ({show}) => {
       <article className="ShowCard">
        <p> {date} </p>
        <p> {venue_name} </p>
-       <p> {id} </p> 
       </article>
     </Link>
     )
