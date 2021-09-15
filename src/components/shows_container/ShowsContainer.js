@@ -3,13 +3,13 @@ import Show from '../show_card/ShowCard';
 import { ShowContext } from '../../contexts/ShowContext';
 import './ShowsContainer.css';
 
-const ShowsContainer = ({ id }) => {
+const ShowsContainer = ({ year }) => {
   const { shows, getShows } = useContext(ShowContext);
   // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getShows(id);
-  }, [id]);
+    getShows(year);
+  }, [year]);
 
   const showCardComponents = shows.map((show) => <Show show={show} />);
 
