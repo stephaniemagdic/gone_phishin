@@ -8,10 +8,10 @@ const YearsContainer = (props) => {
   const { years } = useContext(ShowContext);
   console.log(years, 'inside container');
 
-  const cards = years.map((item) => {
+  const cards = years.map((year) => {
     return (
-      <Link className="year-link" to="gone-phishin/years/:year" key={item}>
-        <YearCard item={item} />
+      <Link className="year-link" to="gone-phishin/years/:year" key={year}>
+        <YearCard year={year} />
       </Link>
     );
   });
