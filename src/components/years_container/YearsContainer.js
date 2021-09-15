@@ -4,14 +4,14 @@ import YearCard from '../year_card/YearCard';
 import { Link } from 'react-router-dom';
 import './YearsContainer.css';
 
-const YearsContainer = (props) => {
+const YearsContainer = () => {
   const { years } = useContext(ShowContext);
   console.log(years, 'inside container');
 
-  const cards = years.map((item) => {
+  const cards = years.map((year) => {
     return (
-      <Link className="year-link" to="gone-phishin/years/:year" key={item}>
-        <YearCard item={item} />
+      <Link className="year-link" to={`/gone-phishin/years/${year}`} key={year}>
+        <YearCard year={year} />
       </Link>
     );
   });
