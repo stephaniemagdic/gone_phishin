@@ -10,7 +10,7 @@ const YearsContainer = (props) => {
 
   const cards = years.map((item) => {
     return (
-      <Link to="gone-phishin/years/:year" key={item}>
+      <Link className="year-link" to="gone-phishin/years/:year" key={item}>
         <YearCard item={item} />
       </Link>
     );
