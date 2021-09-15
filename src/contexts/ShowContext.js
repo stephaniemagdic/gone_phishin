@@ -25,9 +25,9 @@ const ShowContextProvider = ({ children }) => {
     getYears();
   }, []);
 
-  const getShows = async (id) => {
+  const getShows = async (year) => {
     try {
-      const shows = await fetchData(`/years/${id}`);
+      const shows = await fetchData(`/years/${year}`);
       setShows(shows.data);
     } catch (error) {
       setError(error.message);
