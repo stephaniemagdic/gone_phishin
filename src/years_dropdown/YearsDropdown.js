@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ShowContext } from '../contexts/ShowContext';
-import Show from '../show_card/ShowCard';
 
 const YearsDropdown = () => {
   const { years, shows, getShows } = useContext(ShowContext);
@@ -14,7 +13,13 @@ const YearsDropdown = () => {
   });
   return (
     <div>
-      <select name="years" id="yearsSelect">
+      <select
+        name="years"
+        id="yearsSelect"
+        onChange={(e) => {
+          getShows(e.target.value);
+        }}
+      >
         <option value="">Years</option>
         {yearsOptions}
       </select>
