@@ -35,7 +35,8 @@ const [shows, setShows] = useState([]);
 
   return (
     <div className="ShowContainer"> 
-      {showCardComponents}
+      {isLoading && <p>Loading...</p>}
+      {!isLoading && showCardComponents}
     </div>
 
   )
