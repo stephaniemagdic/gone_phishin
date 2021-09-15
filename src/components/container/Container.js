@@ -1,6 +1,7 @@
 import { fetchData } from '../../apiCalls';
 import React, { useEffect, useState } from 'react';
 import Show from '../show_card/ShowCard'
+import './Container.css'
 
 const Container = (props) => {
   const [ isLoading, setIsLoading ] = useState(true);
@@ -19,11 +20,13 @@ const Container = (props) => {
     }, [props.id])
 
     const showCardComponents = shows.map(show => <Show show={show}/>)
-
+    
   return (
-    <div className="ShowContainer"> 
+    <div className="Container">
+      <div className={props.type}> 
       {isLoading && <p>Loading...</p>}
       {!isLoading && showCardComponents}
+      </div>
     </div>
   )
 }
