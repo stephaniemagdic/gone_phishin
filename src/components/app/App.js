@@ -42,7 +42,7 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <ShowsContainer id={match.params.year} />
+                <ShowsContainer year={match.params.year} />
               </div>
             );
           }}
