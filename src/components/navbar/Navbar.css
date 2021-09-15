@@ -1,5 +1,11 @@
 .navbar {
   height: 10%;
   width: 100%;
-  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+}
+
+.phish-in-logo {
+  width: 90%;
+  margin: 10%;
 }
