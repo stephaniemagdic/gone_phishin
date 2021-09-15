@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { ShowContext } from '../contexts/ShowContext';
+import Show from '../show_card/ShowCard';
 
 const YearsDropdown = () => {
-  const { years } = useContext(ShowContext);
+  const { years, shows, getShows } = useContext(ShowContext);
 
   const yearsOptions = years.map((year) => {
     return (
