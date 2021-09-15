@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
-
+import TrackCard from '../track_card/TrackCard';
 import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
@@ -21,9 +21,11 @@ const TracksContainer = ({ id }) => {
     getTracks(id);
   }, []);
 
-  const trackCards = tracks.map((track) => <TrackCard track={track} />);
+  const trackCards = tracks.map((track) => (
+    <TrackCard key={track.id} track={track} />
+  ));
 
-  return <div>{trackCards}</div>;
+  return <section className="tracks-container">{trackCards}</section>;
 };
 
 export default TracksContainer;
