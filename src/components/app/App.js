@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 import YearsContainer from '../years_container/YearsContainer';
 import Footer from '../footer/Footer';
+import { ShowContext } from '../../contexts/ShowContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
+  //To Do
+  // How we can error handle using:
+  // 👇 https://fkhadra.github.io/react-toastify/introduction/
+
+  // const { error } = ShowContext;
+  // useEffect(() => {
+  //   if (error) {
+  //     toast.error(error);
+  //   }
+  // }, [error]);
 
   return (
     <ShowContextProvider>
