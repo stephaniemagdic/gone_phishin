@@ -7,7 +7,7 @@ describe('Show Display User Flows', () => {
       statusCode: 200,
       body: { data: [
         { 
-          date: "2019-02-21",
+          date: "DATE TEST 1",
           duration: 9658254,
           id: 1,
           incomplete: false,
@@ -23,7 +23,7 @@ describe('Show Display User Flows', () => {
           venue_name: "TEST NAME 1"
         },
         { 
-          date: "2019-02-21",
+          date: "DATE TEST 2",
           duration: 9658254,
           id: 2,
           incomplete: false,
@@ -43,7 +43,9 @@ describe('Show Display User Flows', () => {
     })
     cy.visit('http://localhost:3000/years/2019')
     cy.get('.ShowCard').first().contains('TEST NAME 1')
+    cy.contains('DATE TEST 1')
     cy.get('.ShowCard').last().contains('TEST NAME 2')
+    cy.contains('DATE TEST 2')
   });
 
 
