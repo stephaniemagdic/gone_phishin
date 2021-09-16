@@ -4,7 +4,7 @@ import './ShowCard.css'
 const ShowCard = ({show}) => {
   const {date, venue_name, id} = show;
   return (
-    <Link to={`/gone-phishin/shows/${id}`} className="link">
+    <Link to={`/shows/${id}`} className="link">
       <article className="ShowCard">
        <p> {date} </p>
        <p> {venue_name} </p>
