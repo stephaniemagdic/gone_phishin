@@ -11,6 +11,7 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+
 Cypress.Commands.add('fetchYears', (url) => {
   cy.intercept('GET', url, {
     statusCode: 201,
@@ -54,6 +55,7 @@ Cypress.Commands.add('fetchYears', (url) => {
     },
   });
 });
+
 //
 //
 // -- This is a child command --

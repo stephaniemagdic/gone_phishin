@@ -11,12 +11,14 @@ const YearsDropdown = () => {
       </option>
     );
   });
+
   return (
     <div>
       <select
         name="years"
         id="yearsSelect"
         onChange={(e) => {
+          // <Redirect to='/years/'/>
           getShows(e.target.value);
         }}
       >
