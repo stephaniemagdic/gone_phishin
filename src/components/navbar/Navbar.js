@@ -1,5 +1,5 @@
 import React from 'react';
-import YearsDropdown from '../../years_dropdown/YearsDropdown';
+import YearsDropdown from '../years_dropdown/YearsDropdown';
 import phishInLogo from '../../phish-in-logo.png';
 import './Navbar.css';
 
