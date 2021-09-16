@@ -8,7 +8,7 @@ import Footer from '../footer/Footer';
 import { ShowContext } from '../../contexts/ShowContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Container from '../container/Container';
+import ShowsContainer from '../shows_container/ShowsContainer';
 
 function App() {
   //To Do
@@ -28,7 +28,7 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/gone-phishin"
+          path="/"
           render={() => {
             return (
               <div className="years-view">
@@ -39,18 +39,18 @@ function App() {
         />
         <Route
           exact
-          path="/gone-phishin/years/:year"
+          path="/years/:year"
           render={({ match }) => {
             return (
               <div className="app">
-                <Container id={match.params.year} type="shows" />
+                <ShowsContainer year={match.params.year} />
               </div>
             );
           }}
         />
         <Route
           exact
-          path="/gone-phishin/shows/:id"
+          path="/shows/:id"
           render={({ match }) => {
             return (
               <div className="app">
