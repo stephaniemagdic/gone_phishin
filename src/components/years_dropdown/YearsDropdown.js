@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import { ShowContext } from '../../contexts/ShowContext';
 
 const YearsDropdown = () => {
-  const { years, shows, getShows } = useContext(ShowContext);
+  //TO do: refactor to remove from context.
+  // const { years, shows, getShows } = useContext(ShowContext);
+  const { years } = useContext(ShowContext);
 
   const yearsOptions = years.map((year) => {
     return (
@@ -12,15 +15,19 @@ const YearsDropdown = () => {
     );
   });
 
+ const redirect = (year) => {
+   const url = `/years/${year}`;
+   window.location.assign(url); 
+ }
+
   return (
     <div>
       <select
         name="years"
         id="yearsSelect"
-        onChange={(e) => {
-          // <Redirect to='/years/'/>
-          getShows(e.target.value);
-        }}
+        onChange={(e) => 
+          redirect(e.target.value)
+        }
       >
         <option value="">Years</option>
         {yearsOptions}
