@@ -7,7 +7,7 @@ import Footer from '../footer/Footer';
 import { ShowContext } from '../../contexts/ShowContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Container from '../container/Container';
+import ShowsContainer from '../shows_container/ShowsContainer';
 
 function App() {
   //To Do
@@ -38,11 +38,11 @@ function App() {
         />
         <Route
           exact
-          path="gone-phishin/years/:year"
+          path="/gone-phishin/years/:year"
           render={({ match }) => {
             return (
               <div className="app">
-                <Container id={match.params.year} type="shows" />
+                <ShowsContainer year={match.params.year} />
               </div>
             );
           }}
@@ -53,7 +53,7 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                <Container id={match.params.id} />
+                {/* <Container id={match.params.id} /> */}
               </div>
             );
           }}

@@ -8,7 +8,7 @@ const ShowContext = createContext();
 const ShowContextProvider = ({ children }) => {
   const [years, setYears] = useState([]);
   const [error, setError] = useState('');
-  // const [shows, setShows] = useState([]);
+  const [shows, setShows] = useState([]);
   // const [currentTrack, setCurrentTrack] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
 
@@ -25,12 +25,17 @@ const ShowContextProvider = ({ children }) => {
     getYears();
   }, []);
 
-  // const getTrack = (id) => {
-  //   fetchData(`tracks/${id}`).then((data) => setCurrentTrack(data.data));
-  // };
+  const getShows = async (year) => {
+    try {
+      const shows = await fetchData(`/years/${year}`);
+      setShows(shows.data);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   return (
-    <ShowContext.Provider value={{ years, error }}>
+    <ShowContext.Provider value={{ years, error, shows, getShows }}>
       {children}
     </ShowContext.Provider>
   );
