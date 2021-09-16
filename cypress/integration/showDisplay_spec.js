@@ -52,6 +52,9 @@ describe('Show Display User Flows', () => {
 it('A user should be able to click on a card and be taken to a new page', () => {
   cy.get('.ShowCard').first().click()
   cy.url().should('include', '/shows/1')
+  cy.visit('http://localhost:3000/years/2019')
+  cy.get('.ShowCard').last().click()
+  cy.url().should('include', '/shows/2')
 })
 
 });
