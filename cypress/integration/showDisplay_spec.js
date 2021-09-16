@@ -102,7 +102,10 @@ it('A user should be able to select a drop down year to see new show data displa
     })
 
   cy.visit('http://localhost:3000/years/2019')
-  cy.get()
+  cy.get('select').select('2020')
+  //there is some sort of interruption that happens. 
+  //it loads and then I think a fetch then intercepts once more.
+  //I think we need to change the route -- reroute as well when we update the movies on the page. .. so instead we could create a redirect.
 
 })
 
