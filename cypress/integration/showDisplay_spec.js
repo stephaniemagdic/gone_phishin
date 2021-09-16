@@ -44,7 +44,6 @@ describe('Show Display User Flows', () => {
     cy.visit('http://localhost:3000/years/2019')
     cy.get('.ShowCard').first().contains('TEST NAME 1')
     cy.get('.ShowCard').last().contains('TEST NAME 2')
-    
   });
 
 

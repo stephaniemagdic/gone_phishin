@@ -29,6 +29,7 @@ const ShowContextProvider = ({ children }) => {
     try {
       const shows = await fetchData(`/years/${year}`);
       setShows(shows.data);
+      console.log(shows.data)
     } catch (error) {
       setError(error.message);
     }
