@@ -48,5 +48,10 @@ describe('Show Display User Flows', () => {
     cy.contains('DATE TEST 2')
   });
 
+// user should be able to click on each card and be taken to a new page.
+it('A user should be able to click on a card and be taken to a new page', () => {
+  cy.get('.ShowCard').first().click()
+  cy.url().should('include', '/shows/1')
+})
 
 });
