@@ -6,26 +6,53 @@ import './TracksContainer.css';
 const TracksContainer = ({ id }) => {
   const { fetchData } = useContext(ShowContext);
   const [tracks, setTracks] = useState([]);
+  const [show, setShow] = useState({});
   const [error, setError] = useState('');
 
-  const getTracks = async (id) => {
+  const getShow = async (id) => {
     try {
-      const showTracks = await fetchData(`shows/${id}`);
-      setTracks(showTracks.data.tracks);
+      const show = await fetchData(`shows/${id}`);
+      setTracks(show.data.tracks);
+      setShow(show.data);
     } catch (error) {
       setError(error.message);
     }
   };
 
   useEffect(() => {
-    getTracks(id);
+    getShow(id);
   }, []);
 
-  const trackCards = tracks.map((track) => (
-    <TrackCard key={track.id} track={track} />
-  ));
+  const filterBySet = (setNumber) => {
+    return tracks
+      .filter((track) => track.set_name === setNumber)
+      .map((track) => <TrackCard key={track.id} id={track.id} track={track} />);
+  };
 
-  return <section className="tracks-container">{trackCards}</section>;
+  return (
+    <section className="tracks-container">
+      <div className="show-title">
+        {show.date && show.venue_name && show.venue.location && (
+          <h3>
+            {show.date} // {show.venue_name} // {show.venue.location}
+          </h3>
+        )}
+      </div>
+      <h4>-- SET I --</h4>
+      <div className="set-1">{filterBySet('Set 1')}</div>
+      <h4>-- SET II --</h4>
+      <div className="set-2">{filterBySet('Set 2')}</div>
+      {/* need to conditionally render set 3 */}
+      {filterBySet('Set 3') !== 'undefined' && (
+        <div className="set-3">
+          <h4>-- SET III --</h4>
+          <div className="set-3">{filterBySet('Set 3')}</div>
+        </div>
+      )}
+      <h4>-- ENCORE --</h4>
+      <div className="encore">{filterBySet('Encore')}</div>
+    </section>
+  );
 };
 
 export default TracksContainer;
