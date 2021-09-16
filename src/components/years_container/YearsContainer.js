@@ -6,7 +6,6 @@ import './YearsContainer.css';
 
 const YearsContainer = () => {
   const { years } = useContext(ShowContext);
-  console.log(years, 'inside container');
 
   const cards = years.map((year) => {
     return (
