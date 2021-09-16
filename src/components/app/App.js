@@ -3,6 +3,7 @@ import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 import YearsContainer from '../years_container/YearsContainer';
+import TracksContainer from '../tracksContainer/TracksContainer';
 import Footer from '../footer/Footer';
 import { ShowContext } from '../../contexts/ShowContext';
 import { ToastContainer, toast } from 'react-toastify';
@@ -53,7 +54,7 @@ function App() {
           render={({ match }) => {
             return (
               <div className="app">
-                {/* <Container id={match.params.id} /> */}
+                <TracksContainer id={match.params.id} type="tracks" />
               </div>
             );
           }}

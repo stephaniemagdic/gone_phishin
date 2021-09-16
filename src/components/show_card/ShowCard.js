@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import './ShowCard.css'
+import './ShowCard.css';
 
-const ShowCard = ({show}) => {
-  const {date, venue_name, id} = show;
+const ShowCard = ({ show }) => {
+  const { date, venue_name, id } = show;
   return (
     <Link to={`/shows/${id}`} className="link">
       <article className="ShowCard">
@@ -10,13 +10,12 @@ const ShowCard = ({show}) => {
        <p> {venue_name} </p>
       </article>
     </Link>
-    )
-}
+  );
+};
 
 export default ShowCard;
 
-
-//EXAMPLE OF ONE SHOW OBJECT 
+//EXAMPLE OF ONE SHOW OBJECT
 // date: "2019-02-21"
 // duration: 9658254
 // id: 1987
