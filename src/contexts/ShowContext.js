@@ -10,7 +10,7 @@ const ShowContextProvider = ({ children }) => {
   const [error, setError] = useState('');
   const [currentTrack, setCurrentTrack] = useState({});
   const [shows, setShows] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getYears = async () => {
     try {
@@ -34,21 +34,29 @@ const ShowContextProvider = ({ children }) => {
   useEffect(() => {
     getYears();
   }, []);
-  
+
   const getShows = async (year) => {
     try {
       const shows = await fetchData(`/years/${year}`);
       setShows(shows.data);
-      console.log(shows.data)
+      console.log(shows.data);
     } catch (error) {
       setError(error.message);
     }
   };
 
-
   return (
     <ShowContext.Provider
-      value={{ years, error, fetchData, getCurrentTrack, currentTrack, shows, getShows }}
+      value={{
+        years,
+        error,
+        fetchData,
+        getCurrentTrack,
+        currentTrack,
+        shows,
+        getShows,
+        isLoading,
+      }}
     >
       {children}
     </ShowContext.Provider>
