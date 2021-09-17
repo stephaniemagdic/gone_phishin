@@ -31,13 +31,14 @@ const TracksContainer = ({ id }) => {
 
   return (
     <section className="tracks-container">
-      <div className="show-title">
-        {show.date && show.venue_name && show.venue.location && (
-          <h3>
-            {show.date} // {show.venue_name} // {show.venue.location}
-          </h3>
-        )}
-      </div>
+      {show.date && show.venue_name && show.venue.location && (
+        <div className="show-info">
+          <h3>{show.date}</h3>
+          <h3>{show.venue_name}</h3>
+          <h3>{show.venue.location}</h3>
+        </div>
+      )}
+
       <h4>-- SET I --</h4>
       <div className="set-1">{filterBySet('Set 1')}</div>
       <h4>-- SET II --</h4>
