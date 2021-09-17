@@ -3,18 +3,22 @@ import { ShowContext } from '../../contexts/ShowContext';
 import YearCard from '../year_card/YearCard';
 import { Link } from 'react-router-dom';
 import './YearsContainer.css';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const YearsContainer = () => {
   const { years } = useContext(ShowContext);
 
+  const { isPartyMode, partyMode, basic } = useContext(ThemeContext);
+  const theme = isPartyMode ? partyMode : basic;
+
   const cards = years.map((year) => {
     return (
       <Link className="year-link" to={`/years/${year}`} key={year}>
-        <YearCard year={year} />
+        <YearCard style={{ background: theme.mainBG }} year={year} />
       </Link>
     );
   });
-  
+
   return <section className="years-container">{cards}</section>;
 };
 
