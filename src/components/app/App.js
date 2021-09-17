@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShowsContainer from '../shows_container/ShowsContainer';
 
-function App() {
+const App = () => {
   //To Do
   // How we can error handle using:
   // 👇 https://fkhadra.github.io/react-toastify/introduction/
@@ -26,6 +26,7 @@ function App() {
     <ShowContextProvider>
       <Navbar />
       <Switch>
+        {/* {loading && <Loading />} */}
         <Route
           exact
           path="/"
@@ -64,6 +65,6 @@ function App() {
       <Footer />
     </ShowContextProvider>
   );
-}
+};
 
 export default App;
