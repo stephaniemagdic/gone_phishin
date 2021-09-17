@@ -1,0 +1,22 @@
+.footer {
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #f2f3f5;
+  text-align: center;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -20px;
+  justify-content: center;
+}
+
+.venue-info {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -20px;
+justify-content: center;
+}
