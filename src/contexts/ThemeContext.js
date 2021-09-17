@@ -14,11 +14,11 @@ const ThemeContextProvider = ({ children }) => {
   });
 
   const toggleTheme = () => {
-    setTheme({ isPartyMode: !isPartyMode });
+    setTheme({ isPartyMode: !themes.isPartyMode });
   };
 
   return (
-    <ThemeContext.Provider value={(toggleTheme, themes)}>
+    <ThemeContext.Provider value={{ ...themes, toggleTheme: toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
