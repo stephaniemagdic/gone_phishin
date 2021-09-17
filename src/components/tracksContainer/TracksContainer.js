@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
+import { ToastContainer, toast, Zoom, Bounce } from 'react-toastify';
 import TrackCard from '../track_card/TrackCard';
+import 'react-toastify/dist/ReactToastify.css';
 import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
@@ -11,7 +13,11 @@ const TracksContainer = ({ id }) => {
 
   const getShow = async (id) => {
     try {
-      const show = await fetchData(`shows/${id}`);
+      const show = await toast.promise(fetchData(`shows/${id}`), {
+        pending: 'Promise is Pending',
+        success: 'All Good 👌',
+        error: 'Promise rejected 🤯',
+      });
       setTracks(show.data.tracks);
       console.log(show.data);
       setShow(show.data);
