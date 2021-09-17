@@ -13,11 +13,7 @@ const TracksContainer = ({ id }) => {
 
   const getShow = async (id) => {
     try {
-      const show = await toast.promise(fetchData(`shows/${id}`), {
-        pending: 'Promise is Pending',
-        success: 'All Good 👌',
-        error: 'Promise rejected 🤯',
-      });
+      const show = await fetchData(`shows/${id}`);
       setTracks(show.data.tracks);
       console.log(show.data);
       setShow(show.data);
@@ -25,6 +21,21 @@ const TracksContainer = ({ id }) => {
       setError(error.message);
     }
   };
+
+  // const getShow = async (id) => {
+  //   try {
+  //     const show = await toast.promise(fetchData(`shows/${id}`), {
+  //       pending: 'Promise is Pending',
+  //       success: 'All Good 👌',
+  //       error: 'Promise rejected 🤯',
+  //     });
+  //     setTracks(show.data.tracks);
+  //     console.log(show.data);
+  //     setShow(show.data);
+  //   } catch (error) {
+  //     setError(error.message);
+  //   }
+  // };
 
   useEffect(() => {
     getShow(id);
