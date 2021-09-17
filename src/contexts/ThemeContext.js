@@ -1,11 +1,11 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext } from 'react';
 
 const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
   const [themes, setTheme] = useState({
     isPartyMode: false,
-    party: {
+    partyMode: {
       text: 'pink',
       mainBG: 'teal',
       highlightBG: 'orange',
@@ -14,7 +14,7 @@ const ThemeContextProvider = ({ children }) => {
   });
 
   const toggleTheme = () => {
-    setTheme({ isPartyMode: !themes.isPartyMode });
+    setTheme({ ...themes, isPartyMode: !themes.isPartyMode });
   };
 
   return (
@@ -24,4 +24,12 @@ const ThemeContextProvider = ({ children }) => {
   );
 };
 
-export { ThemeContextProvider, ThemeContext };
+function useTheme() {
+  const context = React.useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error('useTheme must be used within a ThemeContextProvider');
+  }
+  return context;
+}
+
+export { ThemeContextProvider, useTheme };
