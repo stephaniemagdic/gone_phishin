@@ -7,7 +7,7 @@ const ThemeToggle = () => {
   const theme = isPartyMode ? partyMode : basic;
   return (
     <button onClick={toggleTheme}>
-      {theme.isPartyMode ? 'Party Mode' : 'Standard View'}
+      {theme.isPartyMode ? 'Standard View' : 'Party Mode'}
     </button>
   );
 };
