@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
@@ -6,11 +6,10 @@ import YearsContainer from '../years_container/YearsContainer';
 import TracksContainer from '../tracksContainer/TracksContainer';
 import Footer from '../footer/Footer';
 // import { ShowContext } from '../../contexts/ShowContext';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShowsContainer from '../shows_container/ShowsContainer';
 import {
-  ThemeContext,
+  // ThemeContext,
   ThemeContextProvider,
 } from '../../contexts/ThemeContext';
 
