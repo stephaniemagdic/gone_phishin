@@ -3,23 +3,22 @@ import React, { useState, createContext, useEffect } from 'react';
 const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
-  const themesObj = {
-    isPartyMode: true,
+  const [themes, setTheme] = useState({
+    isPartyMode: false,
     party: {
       text: 'pink',
       mainBG: 'teal',
       highlightBG: 'orange',
     },
-    dark: { text: '#ddd', mainBG: '#333', highlightBG: '#555' },
-  };
-  const [themes, toggleTheme] = useState(themesObj);
+    basic: { text: '#d9dbdc', mainBG: '#f2f3f5', lowlightBG: '#D9DBDC' },
+  });
 
-  const toggleTheTheme = () => {
-    toggleTheme({ isPartyMode: !isPartyMode });
+  const toggleTheme = () => {
+    setTheme({ isPartyMode: !isPartyMode });
   };
 
   return (
-    <ThemeContext.Provider value={(toggleTheTheme, themes)}>
+    <ThemeContext.Provider value={(toggleTheme, themes)}>
       {children}
     </ThemeContext.Provider>
   );
