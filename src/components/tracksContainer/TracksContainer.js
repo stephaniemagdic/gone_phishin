@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
 import TrackCard from '../track_card/TrackCard';
 import './TracksContainer.css';
@@ -9,19 +9,32 @@ const TracksContainer = ({ id }) => {
   const [show, setShow] = useState({});
   const [error, setError] = useState('');
 
-  const getShow = async (id) => {
-    try {
-      const show = await fetchData(`shows/${id}`);
-      setTracks(show.data.tracks);
-      setShow(show.data);
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+  // const getShow = async (id) => {
+  //   try {
+  //     const show = await fetchData(`shows/${id}`);
+  //     setTracks(show.data.tracks);
+  //     setShow(show.data);
+  //   } catch (error) {
+  //     setError(error.message);
+  //   }
+  // };
+
+  const memo = useCallback(() => {
+    const getShow = async (id) => {
+      try {
+        const show = await fetchData(`shows/${id}`);
+        setTracks(show.data.tracks);
+        setShow(show.data);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+    getShow(id);
+  }, [id, fetchData, setTracks, setShow, setError]);
 
   useEffect(() => {
-    getShow(id);
-  }, []);
+    memo(id);
+  }, [id, memo]);
 
   const filterBySet = (setNumber) => {
     return tracks
