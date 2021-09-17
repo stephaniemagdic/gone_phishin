@@ -34,21 +34,28 @@ const ShowContextProvider = ({ children }) => {
   useEffect(() => {
     getYears();
   }, []);
-  
+
   const getShows = async (year) => {
     try {
       const shows = await fetchData(`/years/${year}`);
       setShows(shows.data);
-      console.log(shows.data)
+      console.log(shows.data);
     } catch (error) {
       setError(error.message);
     }
   };
 
-
   return (
     <ShowContext.Provider
-      value={{ years, error, fetchData, getCurrentTrack, currentTrack, shows, getShows }}
+      value={{
+        years,
+        error,
+        fetchData,
+        getCurrentTrack,
+        currentTrack,
+        shows,
+        getShows,
+      }}
     >
       {children}
     </ShowContext.Provider>
