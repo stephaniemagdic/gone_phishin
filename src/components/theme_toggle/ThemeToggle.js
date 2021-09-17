@@ -1,17 +1,9 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext';
+import React from 'react';
+import { useTheme } from '../../contexts/ThemeContext';
 
 const ThemeToggle = () => {
-  // const { isPartyMode, partyMode, basic, toggleTheme } =
-  //   useContext(ThemeContext);
-  const { toggleTheme } = useContext(ThemeContext);
-  // const themes = isPartyMode ? partyMode : basic;
-  return (
-    <button onClick={toggleTheme}>
-      {/* {themes.isPartyMode ? 'Standard View' : 'Party Mode'} */}
-      this is a button
-    </button>
-  );
+  const { toggleTheme } = useTheme();
+  return <button onClick={toggleTheme}>Change Theme</button>;
 };
 
 export default ThemeToggle;
