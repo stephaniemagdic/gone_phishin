@@ -4,20 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeContext, ThemeContextProvider } from './contexts/ThemeContext';
-
-const { isPartyMode, partyMode, basic } = useContext(ThemeContext);
-const theme = isPartyMode ? partyMode : basic;
 
 ReactDOM.render(
   <BrowserRouter>
-    <ThemeContextProvider>
-      <React.StrictMode>
-        <div style={{ backgroundColor: theme.mainBG }}>
-          <App />
-        </div>
-      </React.StrictMode>
-    </ThemeContextProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </BrowserRouter>,
   document.getElementById('root')
 );
