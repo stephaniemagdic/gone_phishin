@@ -13,6 +13,7 @@ const TracksContainer = ({ id }) => {
     try {
       const show = await fetchData(`shows/${id}`);
       setTracks(show.data.tracks);
+      console.log(show.data);
       setShow(show.data);
     } catch (error) {
       setError(error.message);
