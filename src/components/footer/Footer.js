@@ -12,9 +12,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="track-info">
         <p>{title}</p>
-        <p>{show_date}</p>
       </div>
       <div className="venue-info">
+        <p>{show_date}</p>
         <p>{venue_name}</p>
         <p>{venue_location}</p>
       </div>
