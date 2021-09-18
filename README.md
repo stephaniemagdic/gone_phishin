@@ -35,10 +35,6 @@
   - As the application grows, context will help our application stay organized and keep our code easier to read and manage as we start to use and manipulate shared state values from multiple components.  
   - Currently our application takes advantage of a party mode context called `ThemeContext` which allows multiple components to listen for state held in our ThemeContext (and shared by numerous components) that can be toggled on and off to change component styling.
   - Take a look at our ThemeContext, our ShowCard and our YearCard to see how state (theme, isPartyMode) is shared between components.
-  - ThemeContext allowed us to take advantage of styled components as well, which allows us to write actual CSS in our Javascript 
-  
-  @ Nina or is this just inline styling?
-  
   - We also have a context that holds show data that is shared amongst our components, including our all shows and all tracks data. In the future as more functionality is added, more components will need access to this state.
 + We also used `React Hooks` in our application which allowed us to use state without relying on a class component. We were able to 'hook into' React state and lifecycle features and work with advanced hooks like `useContext`.
 + We are currently collaborating with Phish.in and hoping to merge our mobile version of the application so that Phish fans have a mobile friendly of the desktop application.
