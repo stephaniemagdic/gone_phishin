@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useCallback } from 'react';
 import Show from '../show_card/ShowCard';
 import { ShowContext } from '../../contexts/ShowContext';
 import phishLogoLoading from '../../phishLogoLoading.png';
@@ -7,6 +7,8 @@ import './ShowsContainer.css';
 const ShowsContainer = ({ year }) => {
   const { shows, getShows } = useContext(ShowContext);
   // const [isLoading, setIsLoading] = useState(true);
+
+  // const memo = useCallback
 
   useEffect(() => {
     getShows(year);
