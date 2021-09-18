@@ -22,6 +22,8 @@ describe('Show Display User Flows', () => {
     cy.url().should('include', '/shows/2')
     cy.get('.show-info')
     cy.contains('TEST SHOW DATE')
+    cy.contains('TEST LOCATION 2')
+    cy.contains('TEST NAME 2')
   })
 
   it('A user should be able to select a drop down year to see new show data displayed', () => {
