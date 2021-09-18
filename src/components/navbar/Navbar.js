@@ -15,8 +15,10 @@ export default function Navbar() {
           src={phishInLogo}
         ></img>
       </Link>
-      <ThemeToggle />
-      <YearsDropdown />
+      <div className="button-container">
+        <ThemeToggle />
+        <YearsDropdown />
+      </div>
     </div>
   );
 }
