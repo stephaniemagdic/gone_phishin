@@ -1,15 +1,12 @@
 import React, { useEffect, useContext, useCallback, useState } from 'react';
 import Show from '../show_card/ShowCard';
 import { ShowContext } from '../../contexts/ShowContext';
-import { useTheme } from '../../contexts/ThemeContext';
 import phishLogoLoading from '../../phishLogoLoading.png';
 import './ShowsContainer.css';
 
 const ShowsContainer = ({ year }) => {
   const { shows, getShows } = useContext(ShowContext);
   const [isLoading, setIsLoading] = useState(true);
-  const { isPartyMode, partyMode, basic } = useTheme();
-  const theme = isPartyMode ? partyMode : basic;
 
   const memo = useCallback(() => {
     const renderShows = async () => {
@@ -28,13 +25,7 @@ const ShowsContainer = ({ year }) => {
   ));
 
   return (
-    <div 
-      style={{
-        background: theme.primaryBG,
-        boxShadow: theme.shadow,
-        borderRadius: theme.radius,
-      }}
-    className="show"> 
+    <div className="show"> 
       {isLoading && (
         <img
           className="phish-logo-loading"
