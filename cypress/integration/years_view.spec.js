@@ -23,8 +23,7 @@ describe('Landing Page (Years View)', () => {
       .get('h3')
       .eq(29)
       .contains('1983-1987')
-      .get('footer')
-      .contains('Footer');
+      .get('.track-info')
   });
 
   it('should be able to click on a year and be taken to a new page', () => {
