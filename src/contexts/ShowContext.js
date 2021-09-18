@@ -10,7 +10,6 @@ const ShowContextProvider = ({ children }) => {
   const [error, setError] = useState('');
   const [currentTrack, setCurrentTrack] = useState({});
   const [shows, setShows] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
 
   const getYears = async () => {
     try {
@@ -35,7 +34,6 @@ const ShowContextProvider = ({ children }) => {
     getYears();
   }, []);
 
-  // useCallback()
   const getShows = async (year) => {
     try {
       const shows = await fetchData(`/years/${year}`);
