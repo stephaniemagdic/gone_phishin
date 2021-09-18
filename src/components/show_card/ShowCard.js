@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './ShowCard.css';
 import { useTheme } from '../../contexts/ThemeContext';
 
-
 const ShowCard = ({ show }) => {
   const { isPartyMode, partyMode, basic } = useTheme();
   const theme = isPartyMode ? partyMode : basic;
@@ -15,7 +14,8 @@ const ShowCard = ({ show }) => {
           boxShadow: theme.shadow,
           borderRadius: theme.radius,
         }}
-         className="show-card" >
+        className="card"
+      >
         <p> {date} </p>
         <p> {venue_name} </p>
       </article>
