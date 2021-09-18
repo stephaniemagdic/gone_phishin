@@ -9,16 +9,16 @@ const ShowsContainer = ({ year }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const memo = useCallback(() => {
-    const renderShows = async () => {
+    const fetchShows = async () => {
       await getShows(year);
       setIsLoading(false)
     }
-    renderShows()
-  }, [year, getShows])
+    fetchShows()
+  }, [year])
 
   useEffect(() => {
     memo()
-  }, [year, getShows, memo]);
+  }, [memo]);
 
   const showCardComponents = shows.map((show) => (
     <Show key={show.id} show={show} />
