@@ -58,7 +58,6 @@ Cypress.Commands.add('fetchYears', (url) => {
 
 // Commands for showDisplay 
 Cypress.Commands.add('fetch2019Shows', () => {
-  
   cy.intercept('GET', 'http://phish.in/api/v1/years/2019' , {
       statusCode: 200,
       body: { data: [
@@ -75,7 +74,7 @@ Cypress.Commands.add('fetch2019Shows', () => {
           tour_id: 106,
           tracks: ['test', 'test', 'test', 'test'],
           updated_at: "2019-02-28T02:58:30Z",
-          venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name'}, other_names: [{latitude: 20.631389}],
+          venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name', location: 'TEST LOCATION 1'}, other_names: [{latitude: 20.631389}],
           venue_name: "TEST NAME 1"
         },
         { 
@@ -91,12 +90,52 @@ Cypress.Commands.add('fetch2019Shows', () => {
           tour_id: 106,
           tracks: ['test', 'test', 'test', 'test'],
           updated_at: "2019-02-28T02:58:30Z",
-          venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name2'}, other_names: [{latitude: 20.631389}],
+          venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name2', location: 'TEST LOCATION 2'}, other_names: [{latitude: 20.631389}],
           venue_name: "TEST NAME 2"
         }
       ]
       }
     })
+})
+
+Cypress.Commands.add('fetch2020Shows', () => {
+  cy.intercept('GET', 'http://phish.in/api/v1/years/2020' , {
+  statusCode: 200,
+  body: { data: [
+    { 
+      date: "DATE TEST 1 FOR 2020",
+      duration: 9658254,
+      id: 3,
+      incomplete: false,
+      likes_count: 5,
+      remastered: false,
+      sbd: false,
+      tags: [],
+      taper_notes: "PhishnBarcelo Maya Grand ResortnRiviera Maya, Quintana Roo, Mexicon02/21/2019nnSource",
+      tour_id: 106,
+      tracks: ['test', 'test', 'test', 'test'],
+      updated_at: "2019-02-28T02:58:30Z",
+      venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name'}, other_names: [{latitude: 20.631389}],
+      venue_name: "TEST NAME 1 FOR 2020"
+    },
+    { 
+      date: "DATE TEST 2 FOR 2020",
+      duration: 9658254,
+      id: 4,
+      incomplete: false,
+      likes_count: 5,
+      remastered: false,
+      sbd: false,
+      tags: [],
+      taper_notes: "Phish\nBarcelo Maya Grand Resort\nRiviera Maya, Quintana Roo, Mexico\n02/21/2019\n\nSource ...",
+      tour_id: 106,
+      tracks: ['test', 'test', 'test', 'test'],
+      updated_at: "2019-02-28T02:58:30Z",
+      venue: {id: 817, slug: 'barcelo-maya-beach', name: 'name2'}, other_names: [{latitude: 20.631389}],
+      venue_name: "TEST NAME 2 FOR 2020"
+    }
+  ]
+  }
 })
 //
 //
