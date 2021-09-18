@@ -36,5 +36,12 @@ describe('Show Display User Flows', () => {
     cy.get('.show-card').last().get('.venue').contains('TEST NAME 1 FOR 2020')
   })
 
+  it('A user should be able to click the Change Theme button and see party mode styling', () => {
+    //  cy.get('body').should('have.css', 'background-color', 'rgb(0, 0, 0)')
+
+  })
+
+  
+
 })
 
