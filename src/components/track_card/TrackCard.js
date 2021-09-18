@@ -6,13 +6,13 @@ const TrackCard = ({ track }) => {
   const { getCurrentTrack } = useContext(ShowContext);
   const {
     id,
-    mp3,
-    show_date,
-    show_id,
+    // mp3,
+    // show_date,
+    // show_id,
     title,
-    venue_location,
-    venue_name,
-    waveform_image,
+    // venue_location,
+    // venue_name,
+    // waveform_image,
   } = track;
 
   return (

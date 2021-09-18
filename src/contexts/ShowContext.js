@@ -35,6 +35,7 @@ const ShowContextProvider = ({ children }) => {
     getYears();
   }, []);
 
+  // useCallback()
   const getShows = async (year) => {
     try {
       const shows = await fetchData(`/years/${year}`);

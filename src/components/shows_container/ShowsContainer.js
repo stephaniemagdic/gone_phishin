@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Show from '../show_card/ShowCard';
 import { ShowContext } from '../../contexts/ShowContext';
 import phishLogoLoading from '../../phishLogoLoading.png';
@@ -10,13 +10,15 @@ const ShowsContainer = ({ year }) => {
 
   useEffect(() => {
     getShows(year);
-  }, [year]);
+  }, [getShows, year]);
 
   // useEffect(() => {
   //     setIsLoading(false);
   // }, [shows]);
 
-  const showCardComponents = shows.map((show) => <Show show={show} />);
+  const showCardComponents = shows.map((show) => (
+    <Show key={show.id} show={show} />
+  ));
 
   return (
     <div className="show">
@@ -24,7 +26,11 @@ const ShowsContainer = ({ year }) => {
       {/* {isLoading && <img src={phishLogoLoading}></img>}
       {!isLoading && showCardComponents} */}
       {shows.length < 1 && (
-        <img className="phish-logo-loading" src={phishLogoLoading}></img>
+        <img
+          className="phish-logo-loading"
+          alt="phish-logo-loading"
+          src={phishLogoLoading}
+        ></img>
       )}
       {shows.length > 0 && showCardComponents}
     </div>
