@@ -11,13 +11,13 @@ const ShowsContainer = ({ year }) => {
   const memo = useCallback(() => {
     const renderShows = async () => {
       await getShows(year);
-      setIsLoading(false)
-    }
-    renderShows()
-  }, [year, getShows])
+      setIsLoading(false);
+    };
+    renderShows();
+  }, [year, getShows]);
 
   useEffect(() => {
-    memo()
+    memo();
   }, [year, getShows, memo]);
 
   const showCardComponents = shows.map((show) => (
@@ -25,7 +25,7 @@ const ShowsContainer = ({ year }) => {
   ));
 
   return (
-    <div className="show"> 
+    <div className="show">
       {isLoading && (
         <img
           className="phish-logo-loading"
