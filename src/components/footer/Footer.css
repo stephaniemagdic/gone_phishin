@@ -1,22 +1,24 @@
 .footer {
-  height: 15vh;
+  height: 25vh;
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: #f2f3f5;
+  background-color: lightgray;
   text-align: center;
 }
 
 .track-info {
   display: flex;
   flex-direction: row;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
   justify-content: center;
+  font-size: 10pt;
 }
 
 .venue-info {
   display: flex;
   flex-direction: row;
-  margin-bottom: -20px;
-justify-content: center;
+  margin-bottom: -8px;
+  justify-content: center;
+  font-size: 8pt;
 }

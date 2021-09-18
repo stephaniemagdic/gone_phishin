@@ -1,5 +1,5 @@
 .show-card {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid  #595959 ;
   display: flex;
   flex: flex-wrap;
 }
@@ -9,9 +9,11 @@ p {
   text-decoration: none;
 }
 
-/* link {
+a {
   text-decoration: none;
-&:focus, &:hover, &:visited, &:link, &:active {
-    text-decoration: none;
-} 
-} */
+}
+
+a:hover {
+  text-decoration: none;
+}
+
