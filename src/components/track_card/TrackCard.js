@@ -20,7 +20,7 @@ const TrackCard = ({ track }) => {
   } = track;
 
   return (
-    <article className="track-card" id={id} onClick={() => getCurrentTrack(id)}>
+    <article className="card" id={id} onClick={() => getCurrentTrack(id)}>
       <p className="song-title">{title}</p>
       {/* <iframe src={mp3}>{waveform_image}</iframe> */}
     </article>
