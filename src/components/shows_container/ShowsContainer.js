@@ -25,10 +25,7 @@ const ShowsContainer = ({ year }) => {
   ));
 
   return (
-    <div className="show">
-      {/* To Do: figure out IsLoading state. Is it necessary to even use this. And also I can't figure out how to do it correctly ha!*/}
-      {/* {isLoading && <img src={phishLogoLoading}></img>}
-      {!isLoading && showCardComponents} */}
+    <div className="show"> 
       {isLoading && (
         <img
           className="phish-logo-loading"
@@ -36,7 +33,7 @@ const ShowsContainer = ({ year }) => {
           src={phishLogoLoading}
         ></img>
       )}
-      {shows.length > 0 && showCardComponents}
+      {!isLoading && showCardComponents}
     </div>
   );
 };
