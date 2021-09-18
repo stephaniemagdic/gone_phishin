@@ -20,6 +20,14 @@ body {
   animation: logo-spin 8s linear infinite;
 }
 
+.card {
+  width: 70vw;
+  padding: 1%;
+  margin-bottom: 7%;
+  background-color: #d9dbdc;
+  border-radius: 5px;
+}
+
 @keyframes logo-spin {
   0% {
     transform: translate(-50%, -50%) perspective(200px) rotateX(0deg)
