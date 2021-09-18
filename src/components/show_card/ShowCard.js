@@ -16,9 +16,9 @@ const ShowCard = ({ show }) => {
           borderRadius: theme.radius,
         }}
          className="show-card" >
-        <p> {date} </p>
-        <p> {venue_name} </p>
-        <p> {venue.location} </p>
+        <p className="date"> {date} </p>
+        <p className="venue"> {venue_name} </p>
+        <p className="location"> {venue.location} </p>
       </article>
     </Link>
   );
