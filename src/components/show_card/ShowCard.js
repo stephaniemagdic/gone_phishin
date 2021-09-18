@@ -6,7 +6,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 const ShowCard = ({ show }) => {
   const { isPartyMode, partyMode, basic } = useTheme();
   const theme = isPartyMode ? partyMode : basic;
-  const { date, venue_name, id } = show;
+  const { date, venue_name, venue, id } = show;
   return (
     <Link to={`/shows/${id}`} className="link">
       <article
@@ -18,6 +18,7 @@ const ShowCard = ({ show }) => {
          className="show-card" >
         <p> {date} </p>
         <p> {venue_name} </p>
+        <p> {venue.location} </p>
       </article>
     </Link>
   );
