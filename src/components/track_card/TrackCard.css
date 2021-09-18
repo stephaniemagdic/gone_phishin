@@ -4,7 +4,13 @@
   flex: flex-wrap;
 }
 
+
+
 .song-title {
   margin: 20px;
   text-align: center;
+}
+
+.song-title:hover {
+  cursor: pointer;
 }
