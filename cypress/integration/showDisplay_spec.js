@@ -6,9 +6,10 @@ describe('Show Display User Flows', () => {
     cy.url().should('include', 2019)
     cy.get('.show-card').first().get('.venue').contains('TEST NAME 1')
     cy.get('.date').contains('DATE TEST 1')
-    // cy.get('location')
-    cy.get('.show-card').last().contains('TEST NAME 2')
-    cy.contains('DATE TEST 2')
+    cy.get('location').contains('TEST LOCATION 1')
+    cy.get('.show-card').last().get('.venue').contains('TEST NAME 2')
+    cy.get('.date').contains('DATE TEST 2')
+    cy.get('location').contains('TEST LOCATION 2')
   });
 
 // user should be able to click on each card and be taken to a new page.
