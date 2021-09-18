@@ -6,11 +6,21 @@ const ThemeContextProvider = ({ children }) => {
   const [themes, setTheme] = useState({
     isPartyMode: false,
     partyMode: {
-      text: 'pink',
-      mainBG: 'teal',
-      highlightBG: 'orange',
+      primaryText: '#A81AE5',
+      secondaryText: '#2A58F6',
+      primaryBG: 'rgb(243 145 39 / 79%)',
+      secondaryBG: '31E5F8',
+      radius: '10%',
+      shadow: '5px 5px 15px rgb(173 39 242)',
     },
-    basic: { text: '#d9dbdc', mainBG: '#f2f3f5', lowlightBG: '#D9DBDC' },
+    basic: {
+      primaryText: '#6d6f71',
+      mainBG: '#f2f3f5',
+      primaryBG: '#D9DBDC',
+      secondaryBG: '',
+      radius: '10px',
+      shadow: '',
+    },
   });
 
   const toggleTheme = () => {
