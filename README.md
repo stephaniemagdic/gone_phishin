@@ -1,6 +1,6 @@
 # Gone Phishin
 ## [Link to Deployed Site]()
-## [Link to Project Spec] ()
+## [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 ## Table Of Contents
 + [Overview](#overview)
@@ -56,12 +56,12 @@
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
 
 ## Our Amazing Contributors in No Particular Order
-  + [Justin Anthony](https://github.com/justincanthony)
+  + [Justin Anthony (Author)](https://github.com/justincanthony)
      - Favorite Phish Song: 
   + [Nina Brissey (Author)](https://github.com/ninabrissey)
     - Favorite Phish Song: 
    + [Stephanie Magdic (Author)](https://github.com/stephaniemagdic) 
-    - Favorite Phish Song: 'She would have chose a Metallica Repo. 🤪 '
+    - Favorite Phish Song: 'She would have chose a Metallica API. 🤪 '
 
 ## Future Features
 + We hope to add more search option functionality, including search by venues, and by song.
