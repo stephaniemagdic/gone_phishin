@@ -14,11 +14,12 @@ const ShowsContainer = ({ year }) => {
       setIsLoading(false)
     }
     fetchShows()
-  }, [year, getShows])
+    //DO NOT INCLUDE GET SHOWS AS DEPENDENCY - WILL TRIGGER INFINITE RERENDER LOOP
+  }, [year])
 
   useEffect(() => {
-    memo()
-  }, [year, getShows, memo]);
+    memo(year)
+  }, [memo, year]);
 
   const showCardComponents = shows.map((show) => (
     <Show key={show.id} show={show} />
