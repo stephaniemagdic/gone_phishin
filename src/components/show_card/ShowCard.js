@@ -4,6 +4,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 
 
 const ShowCard = ({ show }) => {
+  console.log("I am rendering a card with", show.id)
   const { isPartyMode, partyMode, basic } = useTheme();
   const theme = isPartyMode ? partyMode : basic;
   const { date, venue_name, venue, id } = show;
