@@ -22,16 +22,14 @@ const YearsDropdown = () => {
   };
 
   return (
-    <div>
-      <select
-        name="years"
-        id="yearsSelect"
-        onChange={(e) => redirect(e.target.value)}
-      >
-        <option value="">Years</option>
-        {yearsOptions}
-      </select>
-    </div>
+    <select
+      name="years"
+      id="yearsSelect"
+      onChange={(e) => redirect(e.target.value)}
+    >
+      <option value="">Years</option>
+      {yearsOptions}
+    </select>
   );
 };
 
