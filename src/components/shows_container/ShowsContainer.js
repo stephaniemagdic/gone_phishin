@@ -9,11 +9,11 @@ const ShowsContainer = ({ year }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const memo = useCallback(() => {
-    const renderShows = async () => {
+    const fetchShows = async () => {
       await getShows(year);
       setIsLoading(false)
     }
-    renderShows()
+    fetchShows()
   }, [year, getShows])
 
   useEffect(() => {
