@@ -55,3 +55,18 @@
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
 
+## Our Amazing Contributors in No Particular Order
+  + [Justin Anthony](https://github.com/justincanthony)
+     - Favorite Phish Song: 
+  + [Nina Brissey (Author)](https://github.com/ninabrissey)
+    - Favorite Phish Song: 
+   + [Stephanie Magdic (Author)](https://github.com/stephaniemagdic) 
+    - Favorite Phish Song: 'She would have chose a Metallica Repo. 🤪 '
+
+## Future Features
++ We hope to add more search option functionality, including search by venues, and by song.
++ We would like to add a reducer as opposed to state and integrate that with our showContext.
+
+### Wins and Challenges
++
++
