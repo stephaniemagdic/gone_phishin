@@ -15,7 +15,7 @@ const YearCard = ({ year }) => {
         boxShadow: theme.shadow,
         borderRadius: theme.radius,
       }}
-      className="year-card"
+      className="card"
       id={year}
     >
       <h3
