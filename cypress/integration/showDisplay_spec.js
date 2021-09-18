@@ -28,21 +28,13 @@ describe('Show Display User Flows', () => {
   })
 
 it('A user should be able to select a drop down year to see new show data displayed', () => {
-
   cy.fetch2020Shows()
   cy.visit('http://localhost:3000/years/2019')
   cy.get('select').select('2020')
   cy.url().should('include', 2020)
   cy.get('.show-card').first().get('.date').contains('DATE TEST 1 FOR 2020')
-  // cy.get('.date').contains('DATE TEST 1')
-  // cy.get('.location').contains('TEST LOCATION 1')
-  // cy.get('.show-card').last().get('.venue').contains('TEST NAME 2')
-  // cy.get('.date').contains('DATE TEST 2')
-  // cy.get('.location').contains('TEST LOCATION 2')
-  //there is some sort of interruption that happens. 
-  //it loads and then I think a fetch then intercepts once more.
-  //I think we need to change the route -- reroute as well when we update the movies on the page. .. so instead we could create a redirect.
-
+  cy.get('.location').contains('TEST LOCATION 1 FOR 2020')
+  cy.get('.show-card').last().get('.venue').contains('TEST NAME 1 FOR 2020')
 })
 
 })
