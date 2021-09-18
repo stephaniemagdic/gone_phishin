@@ -33,6 +33,12 @@
   - Click on any song to play that track.
   - Enter Party Mode and watch the page change in front of you to a more party friendly style. 🤪 🎉 🎛️
 
+## Set-up Instructions
+  + Fork this repo by clicking the ```Fork``` button in the upper right of this page
+  + Clone your new repo down to your local machine in your chosen directory
+  + Type ```npm install``` into the command line to install all dependencies
+  + Type ```npm start``` into to the command line to start the React app. A browser window will appear running a local host url
+
 ## Learning Goals
 + Our team learned several new technologies in the course of a week including React's context API and React hooks.
   - We chose to use React's context API to manage our application state. which allowed us to pass data through the component tree without having to pass props down manually at every level.
@@ -41,5 +47,5 @@
   - Take a look at our ThemeContext, our ShowCard and our YearCard to see how state (theme, isPartyMode) is shared between components.
   - ThemeContext allowed us to take advantage of styled components as well, which allows us to write actual CSS in our Javascript 
   @ Nina or is this just inline styling?
-+ Our application follows functional programming guidelines.
++ We also used React Hooks in our application which allowed us to use state without relying on a class component. We were able to 'hook into' React state and lifecycle features and work with advanced hooks like useContext.
 
