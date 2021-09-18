@@ -57,9 +57,9 @@ Cypress.Commands.add('fetchYears', (url) => {
 });
 
 // Commands for showDisplay 
-Cypress.commands.add('fetch2019Shows', (year) => {
+Cypress.Commands.add('fetch2019Shows', () => {
   
-  cy.intercept('GET', `http://phish.in/api/v1/years/${year}` , {
+  cy.intercept('GET', 'http://phish.in/api/v1/years/2019' , {
       statusCode: 200,
       body: { data: [
         { 
@@ -96,8 +96,8 @@ Cypress.commands.add('fetch2019Shows', (year) => {
         }
       ]
       }
-    }
-  )
+    })
+})
 //
 //
 // -- This is a child command --
