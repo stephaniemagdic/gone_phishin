@@ -1,22 +1,21 @@
 describe('Show Display User Flows', () => {
   //  User should see all shows in a given year.
   it('A user should see stored reservation data should be loaded on the page', () => {
-    cy.fetch2019Shows('GET', '2019') 
-    })
+    cy.fetch2019Shows() 
     cy.visit('http://localhost:3000/years/2019')
     cy.url().should('include', 2019)
-    cy.get('.ShowCard').first().contains('TEST NAME 1')
+    cy.get('.show-card').first().contains('TEST NAME 1')
     cy.contains('DATE TEST 1')
-    cy.get('.ShowCard').last().contains('TEST NAME 2')
+    cy.get('.show-card').last().contains('TEST NAME 2')
     cy.contains('DATE TEST 2')
   });
 
 // user should be able to click on each card and be taken to a new page.
 it('A user should be able to click on a card and be taken to a new page', () => {
-  cy.get('.ShowCard').first().click()
+  cy.get('.show-card').first().click()
   cy.url().should('include', '/shows/1')
   cy.visit('http://localhost:3000/years/2019')
-  cy.get('.ShowCard').last().click()
+  cy.get('.show-card').last().click()
   cy.url().should('include', '/shows/2')
 })
 
@@ -71,6 +70,6 @@ it('A user should be able to select a drop down year to see new show data displa
 
 })
 
-//check something on the next page to check if it is there.
+})
 
-});
+//check something on the next page to check if it is there.
