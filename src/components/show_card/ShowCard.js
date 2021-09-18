@@ -9,7 +9,13 @@ const ShowCard = ({ show }) => {
   const { date, venue_name, id } = show;
   return (
     <Link to={`/shows/${id}`} className="link">
-      <article className="show-card" >
+      <article
+        style={{
+          background: theme.primaryBG,
+          boxShadow: theme.shadow,
+          borderRadius: theme.radius,
+        }}
+         className="show-card" >
         <p> {date} </p>
         <p> {venue_name} </p>
       </article>
