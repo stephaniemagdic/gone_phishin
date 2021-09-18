@@ -14,12 +14,16 @@ const ShowsContainer = ({ year }) => {
       setIsLoading(false)
     }
     fetchShows()
-    //DO NOT INCLUDE GET SHOWS AS DEPENDENCY - WILL TRIGGER INFINITE RERENDER LOOP
+  //DO NOT INCLUDE GET SHOWS AS DEPENDENCY - WILL TRIGGER INFINITE RERENDER LOOP
+  //I am not sure I understand useCallback.
+  //It seems like this would be helpful if this had a parent component constantly rerendering this compnent?
+  //we aren't rerending many child components or are we with mapping through all showCardComponents?
+  //but we don't have anything that would trigger a rerender of this page specfically on this page so it doesn't really apply because it will never be rerendering.
   }, [year])
 
   useEffect(() => {
-    memo(year)
-  }, [memo, year]);
+    memo()
+  }, [memo]);
 
   const showCardComponents = shows.map((show) => (
     <Show key={show.id} show={show} />
