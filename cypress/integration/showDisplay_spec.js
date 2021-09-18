@@ -4,8 +4,9 @@ describe('Show Display User Flows', () => {
     cy.fetch2019Shows() 
     cy.visit('http://localhost:3000/years/2019')
     cy.url().should('include', 2019)
-    cy.get('.show-card').first().contains('TEST NAME 1')
-    cy.contains('DATE TEST 1')
+    cy.get('.show-card').first().get('.venue').contains('TEST NAME 1')
+    cy.get('.date').contains('DATE TEST 1')
+    // cy.get('location')
     cy.get('.show-card').last().contains('TEST NAME 2')
     cy.contains('DATE TEST 2')
   });
