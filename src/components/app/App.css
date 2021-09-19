@@ -6,7 +6,7 @@
   width: 100vw;
 }
 
-.dont-call-it-app {
+.app-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
