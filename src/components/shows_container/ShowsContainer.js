@@ -11,6 +11,7 @@ const ShowsContainer = ({ year }) => {
   const memo = useCallback(() => {
     const fetchShows = async () => {
       await getShows(year);
+<<<<<<< Updated upstream
       setIsLoading(false)
     }
     fetchShows()
@@ -19,6 +20,16 @@ const ShowsContainer = ({ year }) => {
   useEffect(() => {
     memo()
   }, [memo]);
+=======
+      setIsLoading(false);
+    };
+    renderShows();
+  }, [year, getShows]);
+
+  useEffect(() => {
+    memo();
+  }, [year, getShows, memo]);
+>>>>>>> Stashed changes
 
   const showCardComponents = shows.map((show) => (
     <Show key={show.id} show={show} />

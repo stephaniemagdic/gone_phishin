@@ -10,7 +10,7 @@ const YearsDropdown = () => {
 
   const yearsOptions = years.map((year) => {
     return (
-      <option key={year} value={year}>
+      <option className="dropdown-option" key={year} value={year}>
         {year}
       </option>
     );
@@ -22,6 +22,7 @@ const YearsDropdown = () => {
   };
 
   return (
+<<<<<<< Updated upstream
     <select
       name="years"
       id="yearsSelect"
@@ -30,6 +31,19 @@ const YearsDropdown = () => {
       <option value="">Years</option>
       {yearsOptions}
     </select>
+=======
+    <div>
+      <select
+        className="select"
+        name="years"
+        id="yearsSelect"
+        onChange={(e) => redirect(e.target.value)}
+      >
+        <option value="">Years</option>
+        {yearsOptions}
+      </select>
+    </div>
+>>>>>>> Stashed changes
   );
 };
 
