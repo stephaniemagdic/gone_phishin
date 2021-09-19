@@ -1,8 +1,8 @@
 import React from 'react';
 import './ErrorDisplay.css';
 
-const ErrorDisplay = () => {
-  return <p>error</p>;
+const ErrorDisplay = ({ message }) => {
+  return <p>{message}</p>;
 };
 
 export default ErrorDisplay;
