@@ -8,13 +8,6 @@ import './YearsContainer.css';
 const YearsContainer = () => {
   const { years } = useContext(ShowContext);
 
-  // const { isPartyMode, partyMode, basic } = useTheme();
-  // console.log('basic:', basic);
-  // console.log('partyMode:', partyMode);
-  // console.log('isPartyMode:', isPartyMode);
-
-  // const theme = isPartyMode ? partyMode : basic;
-  // const theme = basic;
   const cards = years.map((year) => {
     return (
       <Link className="year-link" to={`/years/${year}`} key={year}>
