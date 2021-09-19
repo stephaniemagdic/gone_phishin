@@ -3,7 +3,6 @@ import { ShowContext } from '../../contexts/ShowContext';
 import YearCard from '../year_card/YearCard';
 import { Link } from 'react-router-dom';
 import './YearsContainer.css';
-// import { useTheme } from '../../contexts/ThemeContext';
 
 const YearsContainer = () => {
   const { years } = useContext(ShowContext);
