@@ -23,7 +23,19 @@ describe('Landing Page (Years View)', () => {
       .get('h3')
       .eq(29)
       .contains('1983-1987')
-      .get('footer')
-      .contains('Footer');
+      .get('.track-info')
   });
+
+  it('should be able to click on a year and be taken to a new page', () => {
+    cy.fetch2019Shows()
+    cy.get('[id=2019]').click()
+    cy.url().should('include', 2019)
+    cy.get('.show-card').first().get('.venue').contains('TEST NAME 1')
+    cy.get('.date').contains('DATE TEST 1')
+    cy.get('.location').contains('TEST LOCATION 1')
+    cy.get('.show-card').last().get('.venue').contains('TEST NAME 2')
+    cy.get('.date').contains('DATE TEST 2')
+    cy.get('.location').contains('TEST LOCATION 2')
+  })
+
 });
