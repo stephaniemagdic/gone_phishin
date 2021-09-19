@@ -1,13 +1,22 @@
 .navbar {
   height: 10%;
-  width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
+  
   align-items: center;
+  align-content: space-around;
 }
 
 .phish-in-logo {
   width: 90%;
   margin: 10%;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+  ;
+}
+
