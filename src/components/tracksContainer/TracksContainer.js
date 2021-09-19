@@ -4,7 +4,7 @@ import TrackCard from '../track_card/TrackCard';
 import ErrorDisplay from '../error_display/ErrorDisplay';
 
 const TracksContainer = ({ id }) => {
-  const { fetchData, getShows } = useContext(ShowContext);
+  const { fetchData } = useContext(ShowContext);
   const [tracks, setTracks] = useState([]);
   const [show, setShow] = useState({});
   const [error, setError] = useState('');
