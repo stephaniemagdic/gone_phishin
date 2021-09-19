@@ -22,16 +22,6 @@ const YearsDropdown = () => {
   };
 
   return (
-<<<<<<< Updated upstream
-    <select
-      name="years"
-      id="yearsSelect"
-      onChange={(e) => redirect(e.target.value)}
-    >
-      <option value="">Years</option>
-      {yearsOptions}
-    </select>
-=======
     <div>
       <select
         className="select"
@@ -43,7 +33,6 @@ const YearsDropdown = () => {
         {yearsOptions}
       </select>
     </div>
->>>>>>> Stashed changes
   );
 };
 
