@@ -50,7 +50,7 @@ const App = () => {
                 );
               }}
             />
-            <Route render={() => <ErrorDisplay />} />
+            <Route render={() => <ErrorDisplay message={'Page Not Found'} />} />
           </Switch>
           <Footer />
         </div>
