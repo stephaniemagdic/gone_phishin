@@ -25,7 +25,7 @@ const ShowsContainer = ({ year }) => {
   ));
 
   return (
-    <div className="show"> 
+    <div className="show">
       {isLoading && (
         <img
           className="phish-logo-loading"

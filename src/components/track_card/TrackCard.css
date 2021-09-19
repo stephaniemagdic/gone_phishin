@@ -1,12 +1,16 @@
 .track-card {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #595959;
   display: flex;
   flex: flex-wrap;
 }
 
+
+
 .song-title {
   margin: 20px;
-  /* text-decoration: none; */
   text-align: center;
-  width: 100%;
+}
+
+.song-title:hover {
+  cursor: pointer;
 }

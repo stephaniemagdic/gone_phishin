@@ -1,24 +1,32 @@
 import React, { useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
+import { useTheme } from '../../contexts/ThemeContext';
+
 import './TrackCard.css';
 
 const TrackCard = ({ track }) => {
   const { getCurrentTrack } = useContext(ShowContext);
-  const {
-    id,
-    // mp3,
-    // show_date,
-    // show_id,
-    title,
-    // venue_location,
-    // venue_name,
-    // waveform_image,
-  } = track;
+  const { isPartyMode, partyMode, basic } = useTheme();
+  const theme = isPartyMode ? partyMode : basic;
+  const { id, title } = track;
 
   return (
-    <article className="track-card" id={id} onClick={() => getCurrentTrack(id)}>
-      <p className="song-title">{title}</p>
-      {/* <iframe src={mp3}>{waveform_image}</iframe> */}
+    <article
+      className="card"
+      id={id}
+      style={{
+        background: theme.primaryBG,
+        boxShadow: theme.shadow,
+        borderRadius: theme.radius,
+      }}
+      onClick={() => getCurrentTrack(id)}
+    >
+      <p
+        className="song-title"
+        style={{ color: theme.primaryText, background: theme.secondaryBG }}
+      >
+        {title}
+      </p>
     </article>
   );
 };
