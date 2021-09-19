@@ -14,9 +14,9 @@ export default function Footer() {
         <p>{title}</p>
       </div>
       <div className="venue-info">
-        <p>{show_date}</p>
-        <p>{venue_name}</p>
-        <p>{venue_location}</p>
+        <p className="venue-text">{show_date}</p>
+        <p className="venue-text">{venue_name}</p>
+        <p className="venue-text">{venue_location}</p>
       </div>
       <ReactAudioPlayer src={mp3} autoPlay={true} controls={true} />
     </footer>
