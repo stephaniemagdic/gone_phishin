@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
 import YearCard from '../year_card/YearCard';
 import { Link } from 'react-router-dom';
+import ErrorDisplay from '../error_display/ErrorDisplay';
 import './YearsContainer.css';
 
 const YearsContainer = () => {
-  const { years } = useContext(ShowContext);
+  const { years, error } = useContext(ShowContext);
 
   const cards = years.map((year) => {
     return (
@@ -15,7 +16,12 @@ const YearsContainer = () => {
     );
   });
 
-  return <section className="years-container">{cards}</section>;
+  return (
+    <section className="years-container">
+      {error && <ErrorDisplay message={error} />}
+      {!error && cards}
+    </section>
+  );
 };
 
 export default YearsContainer;
