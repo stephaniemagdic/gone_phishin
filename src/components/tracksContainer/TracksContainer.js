@@ -12,7 +12,7 @@ const TracksContainer = ({ id }) => {
   const memo = useCallback(() => {
     const getShow = async (id) => {
       try {
-        const show = await fetchData(`shos/${id}`);
+        const show = await fetchData(`shows/${id}`);
         setTracks(show.data.tracks);
         setShow(show.data);
       } catch (error) {
@@ -43,19 +43,23 @@ const TracksContainer = ({ id }) => {
         </div>
       )}
 
-      <h4>-- SET I --</h4>
-      <div className="set-1">{filterBySet('Set 1')}</div>
-      <h4>-- SET II --</h4>
-      <div className="set-2">{filterBySet('Set 2')}</div>
-      {/* need to conditionally render set 3 */}
-      {filterBySet('Set 3') !== 'undefined' && (
-        <div className="set-3">
-          <h4>-- SET III --</h4>
-          <div className="set-3">{filterBySet('Set 3')}</div>
+      {tracks.length > 0 && (
+        <div className="tracks-container">
+          <h4>-- SET I --</h4>
+          <div className="set-1">{filterBySet('Set 1')}</div>
+          <h4>-- SET II --</h4>
+          <div className="set-2">{filterBySet('Set 2')}</div>
+          {/* need to conditionally render set 3 */}
+          {filterBySet('Set 3') !== 'undefined' && (
+            <div className="set-3">
+              <h4>-- SET III --</h4>
+              <div className="set-3">{filterBySet('Set 3')}</div>
+            </div>
+          )}
+          <h4>-- ENCORE --</h4>
+          <div className="encore">{filterBySet('Encore')}</div>
         </div>
       )}
-      <h4>-- ENCORE --</h4>
-      <div className="encore">{filterBySet('Encore')}</div>
     </section>
   );
 };
