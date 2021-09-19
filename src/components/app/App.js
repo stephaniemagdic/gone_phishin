@@ -12,6 +12,7 @@ import {
   // ThemeContext,
   ThemeContextProvider,
 } from '../../contexts/ThemeContext';
+import ErrorDisplay from '../error_display/ErrorDisplay';
 
 const App = () => {
   const { error } = useContext(ShowContext);
@@ -55,7 +56,7 @@ const App = () => {
                 );
               }}
             />
-            <Route render={() => <p>Error. Page Not Found!</p>} />
+            <Route render={() => <ErrorDisplay message={error} />} />
           </Switch>
           <Footer />
         </div>
