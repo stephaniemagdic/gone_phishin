@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
 import TrackCard from '../track_card/TrackCard';
-import 'react-toastify/dist/ReactToastify.css';
-import './TracksContainer.css';
+import ErrorDisplay from '../error_display/ErrorDisplay';
 
 const TracksContainer = ({ id }) => {
-  const { fetchData } = useContext(ShowContext);
+  const { fetchData, getShows } = useContext(ShowContext);
   const [tracks, setTracks] = useState([]);
   const [show, setShow] = useState({});
   const [error, setError] = useState('');
@@ -13,7 +12,7 @@ const TracksContainer = ({ id }) => {
   const memo = useCallback(() => {
     const getShow = async (id) => {
       try {
-        const show = await fetchData(`shows/${id}`);
+        const show = await fetchData(`shos/${id}`);
         setTracks(show.data.tracks);
         setShow(show.data);
       } catch (error) {
@@ -35,6 +34,7 @@ const TracksContainer = ({ id }) => {
 
   return (
     <section className="tracks-container">
+      {error && <ErrorDisplay message={error} />}
       {show.date && show.venue_name && show.venue.location && (
         <div className="show-info">
           <h3>{show.date}</h3>
