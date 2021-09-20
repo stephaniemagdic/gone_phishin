@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { ShowContextProvider, ShowContext } from '../../contexts/ShowContext';
+import React from 'react';
+import { ShowContextProvider } from '../../contexts/ShowContext';
 import { ThemeContextProvider } from '../../contexts/ThemeContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
