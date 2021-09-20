@@ -1,0 +1,25 @@
+.error-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.error-background {
+  height: 35vh;
+  width: 30vw;
+  /* min-width: 250px;
+  min-height: 350px; */
+  max-width: 700px;
+  max-height: 600px;
+} 
