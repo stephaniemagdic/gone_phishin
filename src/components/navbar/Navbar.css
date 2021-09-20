@@ -6,14 +6,14 @@
   align-items: center;
 }
 
-.phish-in-logo {
-  width: 90%;
-  margin: 0%;
-}
-
 .phish-in-link {
   display: flex;
   justify-content: center;
+}
+
+.phish-in-logo {
+  width: 90%;
+  margin: 0%;
 }
 
 .logo-mode-container {
