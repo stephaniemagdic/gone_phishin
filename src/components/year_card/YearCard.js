@@ -3,8 +3,6 @@ import { useTheme } from '../../contexts/ThemeContext';
 import './YearCard.css';
 
 const YearCard = ({ year }) => {
-  // const { years } = useContext(ShowContext);
-
   const { isPartyMode, partyMode, basic } = useTheme();
   const theme = isPartyMode ? partyMode : basic;
 
