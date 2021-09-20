@@ -1,15 +1,15 @@
 # Gone Phishin
-### [Link to Deployed Site]()
-### [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
+#### [Link to Deployed Site]()
+#### [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 ## Table Of Contents
 + [Overview](#overview)
 + [Examples](#examples)
 + [Setup instructions](#setup-instructions)
 + [Learning Goals](#learning-goals)
-+ [Future features](#future-features)
 + [Technologies used](#technologies-used)
 + [Contributors](#contributors)
++ [Future features](#future-features)
 + [Reflections & Wins](#reflections-and-wins)
 
 ## Overview
