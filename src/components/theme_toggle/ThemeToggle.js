@@ -1,12 +1,19 @@
 import React from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
+import partyModeIcon from '../../party-mode-icon.png';
+import standardModeIcon from '../../standard-mode-icon.png';
+import './ThemeToggle.css';
 
 const ThemeToggle = () => {
-  const { toggleTheme, isPartyMode } = useTheme();
+  const { isPartyMode, toggleTheme } = useTheme();
+  // return <button onClick={toggleTheme}>Change Theme</button>;
   return (
-    <button onClick={toggleTheme}>
-      {isPartyMode ? 'Default Theme' : 'Party Mode'}
-    </button>
+    // <div></div>
+    <img
+      className="mode-icon"
+      src={isPartyMode ? partyModeIcon : standardModeIcon}
+      onClick={toggleTheme}
+    />
   );
 };
 

@@ -2,21 +2,27 @@
   height: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  
+  justify-content: center;
   align-items: center;
-  align-content: space-around;
+}
+
+.phish-in-link {
+  display: flex;
+  justify-content: center;
 }
 
 .phish-in-logo {
   width: 90%;
-  margin: 10%;
+  margin: 0%;
 }
 
-.button-container {
+.logo-mode-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center
-  ;
+  flex-direction: row;
+  justify-content: center;
 }
 
+.mode {
+  align-self: flex-end;
+  margin: 3%;
+}
