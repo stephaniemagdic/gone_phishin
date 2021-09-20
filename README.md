@@ -1,6 +1,6 @@
 # Gone Phishin
-## [Link to Deployed Site]()
-## [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
+### [Link to Deployed Site]()
+### [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 ## Table Of Contents
 + [Overview](#overview)
@@ -13,15 +13,16 @@
 + [Reflections & Wins](#reflections-and-wins)
 
 ## Overview
-+   When our team had the chance to dive into some independent learning of new technologies and build something creative we chose. We focused on react's built in `context api` for state management and `functional programming principles` to build a UI that to allow Phish fans to find and play any live Phish audio stream.
-
++   When our team had the chance to dive into some independent learning of new technologies and build something creative we chose. We focused on react's built in `context api` for state management and `functional programming principles` to build a UI to allow Phish fans to find and play any live Phish audio stream.
++   Gone_Phishin allows a user to:
   - Browse by year.
   - Browse by show.
   - See a list of all tracks broken down by set.
-  - Click on any song to play that track.
-  - Use the years drop down from the years display or tracks display to be taken to the the years page to select another show.
-  - Do you know the year you'd like to search? Would you like to bookmark your favorite shows? Use our react router features to bookmark and modify urls to get the data you'd like to see.
+  - Click on and listen to any track.
+  - Use a years drop down from the years or tracks display to be taken to the the years page to switch up the shows data.
+  - Bookmark favorite shows or type in a url path to navigate the application
   - Enter Party Mode and watch the page change in front of you to a more party friendly style. 🤪 🎉 🎛️
+  - See a user-friendly error display (also available in party mode!)
 
 ## Set-up Instructions
   + Fork this repo by clicking the ```Fork``` button in the upper right of this page
@@ -32,10 +33,10 @@
 ## Learning Goals
 + Our team learned several new technologies in the course of a week including React's context API and React hooks.
   - We chose to use `React's Context API` to manage our application state. which allowed us to pass data through the component tree without having to pass props down manually at every level.
-  - As the application grows, context will help our application stay organized and keep our code easier to read and manage as we start to use and manipulate shared state values from multiple components.  
-  - Currently our application takes advantage of a party mode context called `ThemeContext` which allows multiple components to listen for state held in our ThemeContext (and shared by numerous components) that can be toggled on and off to change component styling.
-  - Take a look at our ThemeContext, our ShowCard and our YearCard to see how state (theme, isPartyMode) is shared between components.
-  - We also have a context that holds show data that is shared amongst our components, including our all shows and all tracks data. In the future as more functionality is added, more components will need access to this state.
+  - As the application grows, context will help our application stay organized and easy to read and manage as we start to use and manipulate shared state values from multiple components.  
+  - Currently our application takes advantage of a party mode context called `ThemeContext` which allows multiple components to listen for state changes as party mode is toggled on and off, changing component styling.
+  - Take a look at any page display and choose the toggle theme button to see how state (theme, isPartyMode) is shared between components.
+  - We also have a context that holds show data that is shared amongst our components, including our all shows and all tracks data. Note: In the future as more functionality is added, more components will need access to this state. 
 + We also used `React Hooks` in our application which allowed us to use state without relying on a class component. We were able to 'hook into' React state and lifecycle features and work with advanced hooks like `useContext`.
 + We are currently collaborating with Phish.in and hoping to merge our mobile version of the application so that Phish fans have a mobile friendly of the desktop application.
 
@@ -57,7 +58,7 @@
 
 ### Wins and Challenges
 + Wins:
-  - We enjoyed working as a team and were able to learn several new technologies in just one week while imagining and building a really cool application that exceeded our learning goals.
+  - We enjoyed working as a team and were able to learn several new technologies in just 11 days while imagining and building a really cool application that exceeded our learning goals.
   - We were able to collaborate with the creators of our server side code and kept them in mind when designing our application as they were looking for a responsive mobile view of their UI.
 + Challenges:
   - We ran into troubles trying to implement reducers on our first go when we learned that useReducer doesn't support async actions natively. We plan to incorporate a reducer to clean up or state management in the future by going with a different approach to our reducer actions.
