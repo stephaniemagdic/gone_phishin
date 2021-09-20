@@ -56,5 +56,9 @@
 + We would like to add a reducer as opposed to state and integrate that with our showContext.
 
 ### Wins and Challenges
-+
-+
++ Wins:
+  - We enjoyed working as a team and were able to learn several new technologies in just one week while imagining and building a really cool application that exceeded our learning goals.
+  - We were able to collaborate with the creators of our server side code and kept them in mind when designing our application as they were looking for a responsive mobile view of their UI.
++ Challenges:
+  - We ran into troubles trying to implement reducers on our first go when we learned that useReducer doesn't support async actions natively. We plan to incorporate a reducer to clean up or state management in the future by going with a different approach to our reducer actions.
+
