@@ -1,17 +1,14 @@
 import React from 'react';
 import { ShowContextProvider } from '../../contexts/ShowContext';
+import { ThemeContextProvider } from '../../contexts/ThemeContext';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
 import YearsContainer from '../years_container/YearsContainer';
 import TracksContainer from '../tracksContainer/TracksContainer';
+import ShowsContainer from '../shows_container/ShowsContainer';
+import ErrorDisplay from '../error_display/ErrorDisplay';
 import Footer from '../footer/Footer';
 import './App.css';
-// import { ShowContext } from '../../contexts/ShowContext';
-import ShowsContainer from '../shows_container/ShowsContainer';
-import {
-  // ThemeContext,
-  ThemeContextProvider,
-} from '../../contexts/ThemeContext';
 
 const App = () => {
   return (
@@ -53,7 +50,7 @@ const App = () => {
                 );
               }}
             />
-            <Route render={() => <p>Error. Page Not Found!</p>} />
+            <Route render={() => <ErrorDisplay message={'Page Not Found'} />} />
           </Switch>
           <Footer />
         </div>

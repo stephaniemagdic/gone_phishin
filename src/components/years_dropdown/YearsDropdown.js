@@ -1,12 +1,8 @@
 import React, { useContext } from 'react';
-// import { Redirect } from 'react-router-dom';
 import { ShowContext } from '../../contexts/ShowContext';
 import './YearsDropdown.css';
 
 const YearsDropdown = () => {
-  //TO do: refactor to remove from context.
-  // const { years, shows, getShows } = useContext(ShowContext);
-
   const { years } = useContext(ShowContext);
 
   const yearsOptions = years.map((year) => {

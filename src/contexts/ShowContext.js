@@ -1,8 +1,5 @@
 import React, { useState, createContext, useEffect } from 'react';
 import { fetchData } from '../apiCalls';
-// import { toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
 const ShowContext = createContext();
 
 const ShowContextProvider = ({ children }) => {
