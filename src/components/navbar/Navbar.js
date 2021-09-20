@@ -1,24 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useTheme } from '../../contexts/ThemeContext';
+import ThemeToggle from '../theme_toggle/ThemeToggle';
 import YearsDropdown from '../years_dropdown/YearsDropdown';
 import phishInLogo from '../../phish-in-logo.png';
-import { Link } from 'react-router-dom';
-import ThemeToggle from '../theme_toggle/ThemeToggle';
+import phishInPartyLogo from '../../phish-in-party-multicolor-logo.png';
 import './Navbar.css';
 
-export default function Navbar() {
+const Navbar = () => {
+  const { isPartyMode } = useTheme();
+  console.log(isPartyMode);
   return (
     <div className="navbar">
-      <Link to="/">
+      <div className="mode">
+        <ThemeToggle />
+      </div>
+      <Link className="phish-in-link" to="/">
         <img
           className="phish-in-logo"
           alt="phish-in-logo"
-          src={phishInLogo}
+          // src={phishInPartyLogo}
+          src={isPartyMode ? phishInPartyLogo : phishInLogo}
         ></img>
       </Link>
-      <div className="button-container">
-        <ThemeToggle />
-        <YearsDropdown />
-      </div>
+      <YearsDropdown />
     </div>
   );
-}
+};
+
+export default Navbar;
