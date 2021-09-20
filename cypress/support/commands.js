@@ -11,18 +11,6 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-
-Cypress.Commands.add('requestBadPath', () => {
-  cy.intercept('GET', 'http://phish.in/api/v1/years/idontexist', {
-      statusCode: 400,
-      body: 
-        { 
-          message: "Failed to Fetch",
-        }
-      })
-  }
-)
-
 Cypress.Commands.add('fetchYears', (url) => {
   cy.intercept('GET', url, {
     statusCode: 201,
