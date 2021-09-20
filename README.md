@@ -13,8 +13,8 @@
 + [Reflections & Wins](#reflections-and-wins)
 
 ## Overview
-+   When our team had the chance to dive into some independent learning of new technologies and build something creative we chose. We focused on react's built in `context api` for state management and `functional programming principles` to build a UI to allow Phish fans to find and play any live Phish audio stream.
-+   Gone_Phishin allows a user to:
++ When our team had the chance to dive into some independent learning of new technologies and build something creative we chose. We focused on react's built in `context api` for state management and `functional programming principles` to build a UI to allow Phish fans to find and play any live Phish audio stream.
++ Gone_Phishin allows a user to:
   - Browse by year.
   - Browse by show.
   - See a list of all tracks broken down by set.
