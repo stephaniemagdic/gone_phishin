@@ -1,7 +1,7 @@
 describe('Show Display User Flows', () => {
   it('A user should see stored reservation data should be loaded on the page', () => {
     cy.fetch2019Shows() 
-    cy.visit('http://localhost:3000/years/2019')
+    cy.visit('years/2019')
     cy.url().should('include', 2019)
     cy.get('.card').first().get('.venue').contains('TEST NAME 1')
     cy.get('.date').contains('DATE TEST 1')
@@ -17,7 +17,7 @@ describe('Show Display User Flows', () => {
     cy.get('.card').first().click()
     cy.url().should('include', '/shows/1')
     cy.fetch2019Shows()
-    cy.visit('http://localhost:3000/years/2019')
+    cy.visit('years/2019')
     cy.get('.card').last().click()
     cy.url().should('include', '/shows/2')
     cy.get('.show-info')
@@ -28,7 +28,7 @@ describe('Show Display User Flows', () => {
 
   it('A user should be able to select a drop down year to see new show data displayed', () => {
     cy.fetch2020Shows()
-    cy.visit('http://localhost:3000/years/2019')
+    cy.visit('years/2019')
     cy.get('select').select('2020')
     cy.url().should('include', 2020)
     cy.get('.card').first().get('.date').contains('DATE TEST 1 FOR 2020')
@@ -36,15 +36,17 @@ describe('Show Display User Flows', () => {
     cy.get('.card').last().get('.venue').contains('TEST NAME 1 FOR 2020')
   })
 
-  //START OF TESTING PARTY MODE COLOR
-  // it('A user should be able to click the Change Theme button and see party mode styling', () => {
-  //   cy.visit('http://localhost:3000/years/2019')
-  //   cy.get('button').click()
-  //    cy.get('.card').should('have.css', 'color', '#A81AE5')
-
-  // })
-
   
+  it('A user should be able to click the Default Theme button and see party mode styling', () => {
+    // cy.visit('years/2019')
+
+    // CHANGE THIS AFTER PULLING NINA'S CHANGES ... 
+    // cy.visit('years/2019')
+    // cy.contains('Party Mode').click()
+    // cy.contains('Default Mode').click()
+    // cy.contains('Party Mode')
+
+  })
 
 })
 
