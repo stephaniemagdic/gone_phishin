@@ -215,7 +215,10 @@ Cypress.Commands.add('fetchShow', () => {
         taper_notes:
           'Phish\nBarcelo Maya Grand Resort\nRiviera Maya, Quintana Roo, Mexico\n02/21/2019\n\nSource ...',
         tour_id: 106,
-        tracks: ['test', 'test', 'test', 'test'],
+        tracks: tracks: [
+          { id: 34867, set_name: 'Set 1', title: 'Glide', {"mp3": } },
+          { id: 34868, set_name: 'Set 2', title: "Colonel Forbin's Ascent" },
+        ],
         updated_at: '2019-02-28T02:58:30Z',
         venue: {
           id: 817,
