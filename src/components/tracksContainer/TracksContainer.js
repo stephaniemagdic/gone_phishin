@@ -3,6 +3,7 @@ import { ShowContext } from '../../contexts/ShowContext';
 import TrackCard from '../track_card/TrackCard';
 import ErrorDisplay from '../error_display/ErrorDisplay';
 import dayjs from 'dayjs';
+import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
   const { fetchData } = useContext(ShowContext);
