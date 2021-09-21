@@ -1,14 +1,12 @@
-
 p {
-  margin: 20px; 
+  margin: 2%;
   text-decoration: none;
 }
 
-a {
+.show-card-link {
   text-decoration: none;
 }
 
-a:hover {
+.show-card-link:hover {
   text-decoration: none;
 }
-
