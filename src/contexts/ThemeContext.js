@@ -9,7 +9,9 @@ const ThemeContextProvider = ({ children }) => {
       primaryText: '#A81AE5',
       secondaryText: '#2A58F6',
       primaryBG: 'rgb(243 145 39 / 79%)',
-      secondaryBG: '31E5F8',
+      secondaryBG: '#31E5F8',
+      aquaGradient:
+        'linear-gradient(90deg, rgba(49,229,248,1) 35%, rgba(42,88,246,1) 100%)',
       radius: '10%',
       shadow: '5px 5px 15px rgb(173 39 242)',
     },
