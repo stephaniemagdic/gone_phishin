@@ -12,14 +12,10 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      {/* <div className="track-info"> */}
       <p className="venue-text venue-title">{title}</p>
-      {/* </div> */}
-      {/* <div className="venue-info"> */}
       <p className="venue-text">{formattedDate}</p>
       <p className="venue-text">{venue_name}</p>
       <p className="venue-text">{venue_location}</p>
-      {/* </div> */}
       <ReactAudioPlayer
         className="audio-player"
         src={mp3}
