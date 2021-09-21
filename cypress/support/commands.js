@@ -222,6 +222,12 @@ Cypress.Commands.add('fetchShow', () => {
             title: 'Glide',
             mp3: 'https://phish.in/audio/000/033/499/33499.mp3',
           },
+          {
+            id: 33501,
+            set_name: 'Set 2',
+            title: 'Free',
+            mp3: 'https://phish.in/audio/000/033/501/33501.mp3',
+          },
         ],
         updated_at: '2019-02-28T02:58:30Z',
         venue: {
