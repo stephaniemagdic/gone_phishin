@@ -19,7 +19,6 @@ const Navbar = () => {
         <img
           className="phish-in-logo"
           alt="phish-in-logo"
-          // src={phishInPartyLogo}
           src={isPartyMode ? phishInPartyLogo : phishInLogo}
         ></img>
       </Link>
