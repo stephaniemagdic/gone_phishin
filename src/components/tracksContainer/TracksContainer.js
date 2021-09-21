@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { ShowContext } from '../../contexts/ShowContext';
 import TrackCard from '../track_card/TrackCard';
 import ErrorDisplay from '../error_display/ErrorDisplay';
+import dayjs from 'dayjs';
+import './TracksContainer.css';
 
 const TracksContainer = ({ id }) => {
   const { fetchData } = useContext(ShowContext);
@@ -37,7 +39,7 @@ const TracksContainer = ({ id }) => {
       {error && <ErrorDisplay message={error} />}
       {show.date && show.venue_name && show.venue.location && (
         <div className="show-info">
-          <h3>{show.date}</h3>
+          <h3>{dayjs(show.date).format('MMM D, YYYY')}</h3>
           <h3>{show.venue_name}</h3>
           <h3>{show.venue.location}</h3>
         </div>

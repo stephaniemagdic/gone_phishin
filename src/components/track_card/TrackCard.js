@@ -21,10 +21,7 @@ const TrackCard = ({ track }) => {
       }}
       onClick={() => getCurrentTrack(id)}
     >
-      <p
-        className="song-title"
-        style={{ color: theme.primaryText, background: theme.secondaryBG }}
-      >
+      <p className="song-title" style={{ color: theme.primaryText }}>
         {title}
       </p>
     </article>

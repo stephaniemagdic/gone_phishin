@@ -16,10 +16,7 @@ const YearCard = ({ year }) => {
       className="card"
       id={year}
     >
-      <h3
-        style={{ color: theme.primaryText, background: theme.secondaryBG }}
-        className="year-text"
-      >
+      <h3 style={{ color: theme.primaryText }} className="year-text">
         {year}
       </h3>
     </div>

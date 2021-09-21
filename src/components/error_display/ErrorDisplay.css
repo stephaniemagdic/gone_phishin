@@ -16,10 +16,7 @@ h3 {
 }
 
 .error-background {
-  height: 35vh;
-  width: 30vw;
-  /* min-width: 250px;
-  min-height: 350px; */
+  height: 30vh;
   max-width: 700px;
   max-height: 600px;
-} 
+}

@@ -6,21 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  word-break:keep-all;
+  word-break: keep-all;
   margin-bottom: 30vh;
-  text-align: center;
-}
-
-.show-info {
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2%;
-}
-
-.set-1, .set-2 {
-  margin-bottom:  3%;
-}
-
-.set-3 {
   text-align: center;
 }
