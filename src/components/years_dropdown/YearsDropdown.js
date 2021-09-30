@@ -14,7 +14,7 @@ const YearsDropdown = () => {
   });
 
   const redirect = (year) => {
-    const url = `/gone_phishin/years/${year}`;
+    const url = `https://stephaniemagdic.github.io/gone_phishin/years/${year}`;
     window.location.assign(url);
   };
 
