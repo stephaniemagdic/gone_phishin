@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gone_phishin/static/css/main.53517bd7.chunk.css",
-    "main.js": "/gone_phishin/static/js/main.9d9ff0b3.chunk.js",
-    "main.js.map": "/gone_phishin/static/js/main.9d9ff0b3.chunk.js.map",
+    "main.js": "/gone_phishin/static/js/main.67010a6a.chunk.js",
+    "main.js.map": "/gone_phishin/static/js/main.67010a6a.chunk.js.map",
     "runtime-main.js": "/gone_phishin/static/js/runtime-main.6a9448d4.js",
     "runtime-main.js.map": "/gone_phishin/static/js/runtime-main.6a9448d4.js.map",
     "static/js/2.ac3f91ee.chunk.js": "/gone_phishin/static/js/2.ac3f91ee.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.6a9448d4.js",
     "static/js/2.ac3f91ee.chunk.js",
     "static/css/main.53517bd7.chunk.css",
-    "static/js/main.9d9ff0b3.chunk.js"
+    "static/js/main.67010a6a.chunk.js"
   ]
 }
