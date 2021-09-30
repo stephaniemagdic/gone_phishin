@@ -1,5 +1,5 @@
 # Gone Phishin
-#### [Link to Deployed Site]()
+#### [Link to Deployed Site](https://stephaniemagdic.github.io/gone_phishin/)
 #### [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 ## Table Of Contents
