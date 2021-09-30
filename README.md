@@ -1,4 +1,4 @@
-# Gone Phishin
+# [Gone Phishin](https://stephaniemagdic.github.io/gone_phishin/)
 #### [Link to Deployed Site](https://stephaniemagdic.github.io/gone_phishin/)
 #### [Link to Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
