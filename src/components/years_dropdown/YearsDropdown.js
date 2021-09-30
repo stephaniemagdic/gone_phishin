@@ -14,7 +14,7 @@ const YearsDropdown = () => {
   });
 
   const redirect = (year) => {
-    const url = `/years/${year}`;
+    const url = `/gone_phishin/years/${year}`;
     window.location.assign(url);
   };
 
