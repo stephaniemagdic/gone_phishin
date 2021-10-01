@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/stephaniemagdic/gone_phishin.git"
   },
-  "homepage": "https://stephaniemagdic.github.io/doth_translate/",
+  "homepage": "https://stephaniemagdic.github.io/gone_phishin/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
