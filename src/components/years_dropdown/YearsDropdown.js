@@ -14,10 +14,10 @@ const YearsDropdown = () => {
   });
 
   const redirect = (year) => {
-    const url = `https://stephaniemagdic.github.io/gone_phishin/years/${year}`;
+    const url = `/years/${year}`;
     window.location.assign(url);
   };
-
+  
   return (
     <div>
       <select

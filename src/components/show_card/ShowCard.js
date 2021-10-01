@@ -8,7 +8,7 @@ const ShowCard = ({ show }) => {
   const theme = isPartyMode ? partyMode : basic;
   const { date, venue_name, venue, id } = show;
   return (
-    <Link to={`/gone_phishin/shows/${id}`} className="show-card-link">
+    <Link to={`/shows/${id}`} className="show-card-link">
       <article
         style={{
           background: theme.primaryBG,

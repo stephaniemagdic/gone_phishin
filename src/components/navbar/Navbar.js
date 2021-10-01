@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="mode">
         <ThemeToggle />
       </div>
-      <Link className="phish-in-link" to="/gone_phishin/">
+      <Link className="phish-in-link" to="/">
         <img
           className="phish-in-logo"
           alt="phish-in-logo"

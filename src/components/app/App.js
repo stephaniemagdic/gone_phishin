@@ -19,7 +19,7 @@ const App = () => {
           <Switch>
             <Route
               exact
-              path="/gone_phishin/"
+              path="/"
               render={() => {
                 return (
                   <div className="app">
@@ -30,7 +30,7 @@ const App = () => {
             />
             <Route
               exact
-              path="/gone_phishin/years/:year"
+              path="/years/:year"
               render={({ match }) => {
                 return (
                   <div className="app">
@@ -41,7 +41,7 @@ const App = () => {
             />
             <Route
               exact
-              path="/gone_phishin/shows/:id"
+              path="/shows/:id"
               render={({ match }) => {
                 return (
                   <div className="app">
