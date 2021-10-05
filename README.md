@@ -50,7 +50,7 @@
   + [Nina Brissey (Author)](https://github.com/ninabrissey)
     - Favorite Phish Song: 
    + [Stephanie Magdic (Author)](https://github.com/stephaniemagdic) 
-    - Favorite Phish Song: 'She would have chose a Led Zeppelin API. 🤪 '
+    - Favorite Phish Song: 'She would have chosen a Led Zeppelin API. 🤪 '
 
 ## Future Features
 + We hope to add more search option functionality, including search by venues, and by song.
